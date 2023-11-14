@@ -7,9 +7,11 @@
     {% render "navbar", metadata: site.metadata, resource: resource %}
 
     <main>
+      <div style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+        <img src="{{ '/images/oscar.jpg' | relative_url }}" alt="Oscar Barlow" style="width: 33.33%; border-radius: 50%; overflow: hidden; object-fit: cover;">
+      </div>
+      <h1>Oscar Barlow</h1>
       {{ content }}
     </main>
-
-    {% render "footer", metadata: site.metadata %}
   </body>
 </html>

@@ -1,7 +1,15 @@
----
-layout: default
----
-
-<h1>{{ data.title }}</h1>
-
-{{ content }}
+<!doctype html>
+    <html lang="{{ site.locale }}">
+      <head>
+        {% render "head", metadata: site.metadata, title: data.title %}
+      </head>
+      <body class="{{ data.layout }} {{ data.page_class }}">
+        {% render "navbar", metadata: site.metadata, resource: resource %}
+    
+        <main>
+          <div style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+          </div>
+          {{ content }}
+        </main>
+      </body>
+    </html>

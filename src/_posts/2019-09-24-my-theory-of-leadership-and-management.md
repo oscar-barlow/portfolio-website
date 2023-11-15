@@ -2,7 +2,6 @@
 layout: post
 title: "My theories of what leadership and management are"
 date: 2019-09-24
-categories: principles, leadership, management
 ---
 
 I've read [The Mythical Man Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) and [The Phoenix Project](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/) recently. They're both excellent, and have a surprising amount in common despite the 30-odd year gap between their publication. In particular, both are apparently about IT but are actually about management and leadership.

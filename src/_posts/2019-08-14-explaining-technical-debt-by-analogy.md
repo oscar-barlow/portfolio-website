@@ -2,7 +2,6 @@
 layout: post
 title: "Explaining technical debt by analogy"
 date: 2019-08-14
-categories: techdebt
 ---
 
 I was interested to read a post on the Squarespace engineering blog, [3 Good Types of Tech Debt](https://engineering.squarespace.com/blog/2019/three-kinds-of-good-tech-debt), exploring the subject of tech debt. I think it's good that the idea that tech debt is receiving though and attention; in this vein I'm somewhat reminded of [A Taxonomy of Tech Debt](https://technology.riotgames.com/news/taxonomy-tech-debt).

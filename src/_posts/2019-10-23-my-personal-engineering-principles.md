@@ -2,7 +2,6 @@
 layout: post
 title: My personal engineering principles
 date: 2019-10-23
-categories: principles
 ---
 
 _"What are your personal engineering principles?"_

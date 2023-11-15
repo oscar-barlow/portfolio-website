@@ -2,7 +2,6 @@ services:
   - type: web
     name: portfolio-website
     runtime: static
-    region: frankfurt
     buildCommand: make
     staticPublishPath: ./output
     pullRequestPreviewsEnabled: true

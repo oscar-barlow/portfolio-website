@@ -14,3 +14,4 @@ services:
       - key: BRIDGETOWN_ENV
         value: production
     domains:
+      - oscarbarlow.com

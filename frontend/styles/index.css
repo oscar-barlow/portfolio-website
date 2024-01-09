@@ -83,6 +83,18 @@ div.footnotes {
   font-size: 0.9rem;
 }
 
+blockquote{
+  font-size: 1.2em;
+  width:60%;
+  margin:50px auto;
+  font-style:italic;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid var(--action-color) ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
 footer {
   text-align: center;
   margin-bottom: 4rem;

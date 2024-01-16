@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My personal engineering principles
+title: "My personal engineering principles"
 date: 2019-10-23
 ---
 

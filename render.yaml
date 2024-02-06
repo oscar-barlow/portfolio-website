@@ -5,9 +5,6 @@ services:
     buildCommand: make
     staticPublishPath: ./output
     pullRequestPreviewsEnabled: true
-    buildFilter:
-      paths:
-      - ./output
     envVars:
       - key: SKIP_INSTALL_DEPS
         value: true

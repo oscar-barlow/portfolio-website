@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using experts & being advised"
-date: 2024-01-09
+date: 2024-02-06
 ---
 A relative told a funny story: they were working at a data science consultancy, on a customer acquisition project for a bank. One of the client's teams were irritated by the engagement and they decided to run their own customer acquisition project. They spent half a million Euros. At the end of the project, how many new customers had they acquired?
 

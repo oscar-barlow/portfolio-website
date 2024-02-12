@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Marking your own homework"
+date: 2024-02-12
+---
 Podcasts and newsletters have started doing pieces where they check the accuracy of their predictions[^1]. This seems to be influenced by Tetlock and Gardner's critique of in Super forecasting[^2] that pundits don't make predictions that are clearly true or false, and that they never hold themselves accountable. Well, they started.
 
 There is plenty of scope to include this practice in engineering leadership, particularly in relation to system design. A few possibilities to review are described below.

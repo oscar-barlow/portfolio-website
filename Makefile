@@ -8,4 +8,4 @@ start:
 
 .PHONY: spellcheck
 spellcheck:
-	./node_modules/.bin/spellchecker --files src/*.md  src/_posts/*.md
+	./node_modules/.bin/spellchecker --files src/*.md  src/_posts/*.md --language en-GB --dictionaries dictionary.txt

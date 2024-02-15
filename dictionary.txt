@@ -8,3 +8,4 @@ human-centric
 skillset
 subnet
 frictious
+misallocation

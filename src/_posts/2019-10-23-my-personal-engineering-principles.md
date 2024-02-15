@@ -17,7 +17,7 @@ So here are my principles; hey speak to my approach and mindset more than any sp
 ## You are not so smart
 I like to remember that my brain, although I it's capable of some pretty neat stuff, has limitations. Any software system more complex than a pet project is likely too complex for me to have full, detailed knowledge of all of its components and all of its behaviours.
 
-This is why I write tests. This is why I write unobfuscated code. This is why I design systems to be failure tolerant. This is why I seek broad input on a problem, and the shape of the solution.
+This is why I write tests. This is why I write non-obfuscated code. This is why I design systems to be failure tolerant. This is why I seek broad input on a problem, and the shape of the solution.
 
 ## No matter how much it looks like it, 'writing code' is not your actual job
 So easy to forget, because what do I spend most of my doing? Writing code.

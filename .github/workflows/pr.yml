@@ -22,3 +22,9 @@ jobs:
       - name: spellcheck
         run: |
           yarn && make spellcheck
+
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v4
+        if: success() || failure()
+        with:
+          report_paths: '**/spag.junit.xml'

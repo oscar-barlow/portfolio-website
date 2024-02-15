@@ -3,8 +3,6 @@ name: PR CI
 on:
   pull_request:
   push:
-    paths:
-      - "*"
     branches:
       - "*"
       - "!master"
@@ -17,7 +15,7 @@ jobs:
       - name: Set node version
         uses: actions/setup-node@v4
         with:
-          - node-version: "20"
+          node-version: "20"
       - name: Checkout code
         uses: actions/checkout@v4
 

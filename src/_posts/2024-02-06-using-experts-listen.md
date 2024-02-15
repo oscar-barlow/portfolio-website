@@ -13,7 +13,7 @@ This is embarrassing for the client team, but it's also a bad look for the consu
 
 > In fact, for senior executives - sometimes you really can’t give them advice - they’re too type-A and overly confident. The only way to convince them is to help them see the problem in a new light - to see things as you see them.
 
-This places too much emphasis on the consultant. If one is going to engage expert advisors, one must acquire and master the skill of being advised[^1]. 
+This places too much emphasis on the consultant. If one is going to engage expert advisers, one must acquire and master the skill of being advised[^1]. 
 
 
-[^1]: And the skill of selecting appropriate advisors.
+[^1]: And the skill of selecting appropriate advisers.

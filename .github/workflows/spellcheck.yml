@@ -11,7 +11,7 @@ on:
       - "!master"
 
 jobs:
-  pr-ci:
+  spellcheck:
     runs-on: ubuntu-latest
 
     steps:

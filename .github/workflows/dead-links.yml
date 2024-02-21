@@ -1,0 +1,20 @@
+name: Check links
+
+on:
+    pull_request:
+    push:
+        branches:
+            - "*"
+            - "!master"
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          fail: true
+          args: --base . --verbose --no-progress './**/*.md' './**/*.html' --exclude-path README.md --exclude-path src/posts.md

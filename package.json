@@ -20,7 +20,7 @@
     "postcss": "^8.4.29",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.0.1",
-    "postcss-load-config": "^4.0.1",
+    "postcss-load-config": "^5.0.3",
     "postcss-preset-env": "^9.1.2",
     "read-cache": "^1.0.0",
     "spellchecker-cli": "^6.2.0"

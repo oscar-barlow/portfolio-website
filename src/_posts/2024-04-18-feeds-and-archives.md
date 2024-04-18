@@ -13,7 +13,7 @@ If you watch an old movie about the stock market, you'll see ticker tape: a thin
 
 The opposite of a ticker is an archive: information that has been systematically arranged according to some scheme and optimised for later retrieval. 
 
-If a ticker contains hetereogeneous information and it is updated often, it becomes overwhelming (Twitter). This is not true of archives. 
+If a ticker contains heterogeneous information and it is updated often, it becomes overwhelming (Twitter). This is not true of archives. 
 
 It takes little to no work to use a ticker. An archive requires dedicated time and effort to maintain, or it degrades.
 

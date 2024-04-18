@@ -1,7 +1,9 @@
+1860s
 Bezos
 Critchlow's
 frictious
 human-centric
+iMessage
 Larsson
 misallocation
 Roose
@@ -10,3 +12,4 @@ Squarespace
 subnet
 Superforecasting
 Tetlock
+WhatsApp

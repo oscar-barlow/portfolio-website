@@ -11,7 +11,9 @@ If you watch an old movie about the stock market, you'll see ticker tape: a thin
 * News on Twitter[^3]
 * ...
 
-The opposite of a ticker is an archive: information that has been systematically arranged according to some scheme and optimised for later retrieval. It takes little to no work to use a ticker. An archive requires dedicated time and effort, or it degrades.
+The opposite of a ticker is an archive: information that has been systematically arranged according to some scheme and optimised for later retrieval. 
+
+It takes little to no work to use a ticker. An archive requires dedicated time and effort to maintain, or it degrades.
 
 You cannot organise on the basis of information in a ticker, you can only react. 
 

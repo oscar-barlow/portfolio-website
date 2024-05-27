@@ -1,8 +1,11 @@
-deploy:
-	bundle install
-	yarn install
+.PHONY: deps
+deps:
+	bundle install && yarn install
+
+deploy: deps
 	./bin/bridgetown deploy
 
+.PHONY: start
 start:
 	./bin/bridgetown start
 

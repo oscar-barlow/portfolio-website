@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "strip-ansi": "^7.1.0",
-    "string-width": "^6.0.0"
+    "string-width": "^7.1.0"
   },
   "devDependencies": {
     "esbuild": "^0.20.2",

@@ -2,7 +2,7 @@ services:
   - type: web
     name: portfolio-website
     runtime: static
-    buildCommand: make
+    buildCommand: make deploy
     staticPublishPath: ./output
     pullRequestPreviewsEnabled: true
     envVars:

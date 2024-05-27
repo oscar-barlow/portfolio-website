@@ -17,4 +17,4 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with:
           fail: true
-          args: --base . --verbose --no-progress './**/*.md' './**/*.html' --exclude-path README.md --exclude-path src/posts.md --exclude https://samf.substack.com/p/the-audit-2023
+          args: --base . --verbose --no-progress './**/*.md' './**/*.html' --exclude-path README.md --exclude-path src/posts.md --exclude https://samf.substack.com/p/the-audit-2023 --exclude https://www.nytimes.com/2023/12/22/podcasts/hard-fork-predictions-jenny-slate.html

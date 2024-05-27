@@ -1,6 +1,7 @@
 .PHONY: deps
 deps:
-	bundle install && yarn install
+	bundle install
+	yarn install
 
 deploy: deps
 	./bin/bridgetown deploy

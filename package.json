@@ -15,7 +15,7 @@
     "string-width": "^7.2.0"
   },
   "devDependencies": {
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.25.0",
     "glob": "^11.0.0",
     "postcss": "^8.5.3",
     "postcss-flexbugs-fixes": "^5.0.2",

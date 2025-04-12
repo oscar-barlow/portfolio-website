@@ -1,4 +1,6 @@
 ---
 layout: default
 ---
-  Visionary technology leader with extensive experience driving data and AI initiatives across financial services and retail sectors. Proven track record in building and scaling high-performing, diverse teams, with a focus on mentoring junior talent into senior roles. Expert in implementing cutting-edge data architectures and spearheading AI-powered transformations while ensuring ethical practices and regulatory adherence. 
+  Innovative technology leader known for bringing originality and creative energy to complex data and AI initiatives, while leveraging unique communication abilities to bridge technical and business domains. Proven track record in building inclusive, high-performing teams.
+  
+  Thrives in ambiguous environments. Combines analytical rigour with a human-centred approach to technology, delivering solutions that create millions in value while remaining ethically sound and forward-thinking.

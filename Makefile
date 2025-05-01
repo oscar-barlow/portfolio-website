@@ -1,7 +1,12 @@
-deploy:
+alphabetise-dictionary:
+	sort -o dictionary.txt dictionary.txt
+
+deploy: deps
+	./bin/bridgetown deploy
+
+deps:
 	bundle install
 	yarn install
-	./bin/bridgetown deploy
 
 start:
 	./bin/bridgetown start

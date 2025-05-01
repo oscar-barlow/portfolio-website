@@ -1,4 +1,5 @@
 ---
+title: Oscar Barlow
 layout: default
 ---
   Innovative technology leader known for bringing originality and creative energy to complex data and AI initiatives, while leveraging unique communication abilities to bridge technical and business domains. Proven track record in building inclusive, high-performing teams.

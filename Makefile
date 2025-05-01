@@ -1,6 +1,3 @@
-build:
-	./bin/bridgetown build
-
 alphabetise-dictionary:
 	sort -o dictionary.txt dictionary.txt
 

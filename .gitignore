@@ -1,5 +1,6 @@
 # Bridgetown
 output
+!output/.gitkeep
 .bridgetown-cache
 .bridgetown-metadata
 .bridgetown-webpack

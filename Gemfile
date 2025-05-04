@@ -3,5 +3,3 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "bridgetown", "~> 1.3.4"
 gem "puma", "< 7"
-
-ruby file: '3.2.2'

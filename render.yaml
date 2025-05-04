@@ -6,8 +6,6 @@ services:
     staticPublishPath: ./output
     pullRequestPreviewsEnabled: true
     envVars:
-      - key: SKIP_INSTALL_DEPS
-        value: true
       - key: BRIDGETOWN_ENV
         value: production
     domains:

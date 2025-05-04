@@ -1,3 +1,5 @@
+default: deploy
+
 build:
 	./bin/bridgetown build
 

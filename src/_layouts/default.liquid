@@ -7,12 +7,19 @@
     {% render "navbar", metadata: site.metadata, resource: resource %}
 
     <main>
-      <div style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
-        <img src="{{ '/images/oscar.jpg' | relative_url }}" alt="Oscar Barlow" style="width: 33.33%; border-radius: 50%; overflow: hidden; object-fit: cover;">
+      <div class="profile-section">
+        <div class="profile-image-container">
+          <img src="{{ '/images/oscar.jpg' | relative_url }}" alt="Oscar Barlow" class="profile-image">
+          <div class="image-accent"></div>
+        </div>
+        <div class="title-section">
+          <h1>Oscar Barlow</h1>
+          <div class="executive-tagline">Technology Leader & Strategic Advisor</div>
+        </div>
       </div>
-      <h1>Oscar Barlow</h1>
-      <div class="rubric" style="text-align: justify;">
-      {{ content }}
+      
+      <div class="rubric">
+        {{ content }}
       </div>
     </main>
     <!-- 100% privacy-first analytics -->

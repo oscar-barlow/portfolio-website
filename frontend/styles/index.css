@@ -1,20 +1,25 @@
 :root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
-  --heading-color: black;
-  --action-color: #006666;
-  --action-color-secondary: #FF5733;
+  --body-background: #fafafa;
+  --body-color: #2c2c2c;
+  --heading-color: #1a1a1a;
+  --action-color: #2563eb;
+  --action-color-secondary: #7c3aed;
+  --accent-color: #f59e0b;
+  --subtle-border: #e5e7eb;
+  --card-background: #ffffff;
+  --muted-text: #6b7280;
 }
 
 body {
   background: var(--body-background);
   color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   "Helvetica", "Arial", sans-serif;
-  margin: 0 8px;
-  font-size: 108%;
-  line-height: 1.5;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 a {
@@ -28,12 +33,13 @@ a:hover {
 }
 
 h1 {
-  margin: 1rem 0 3rem;
+  margin: 2rem 0 1rem;
   text-align: center;
-  font-weight: 900;
-  font-size: 2.5rem;
+  font-weight: 700;
+  font-size: 3rem;
   color: var(--heading-color);
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 body > header {
@@ -53,28 +59,61 @@ body > nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: bold;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+body > nav ul a {
+  position: relative;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+body > nav ul a:hover {
+  background: var(--card-background);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cv-link {
+  background: linear-gradient(135deg, var(--action-color), var(--action-color-secondary));
+  color: white !important;
+  border-radius: 6px;
+  padding: 0.5rem 1rem !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.cv-link:hover {
+  background: linear-gradient(135deg, var(--action-color-secondary), var(--action-color));
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15) !important;
 }
 
 div.rubric {
-  text-align: center;
-  margin: 3rem;
-  font-size: 1.4rem;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 45rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 main {
   margin: 2rem auto 4rem;
   max-width: 65rem;
   min-height: calc(100vh - 200px);
-  padding: 25px 25px 50px;
-  background: white;
-  box-shadow: 2px 3px 3px #ddd;
-  border-radius: 3px;
+  padding: 3rem 2rem 4rem;
+  background: var(--card-background);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  border: 1px solid var(--subtle-border);
 
   @media (max-width: 500px) {
-    padding: 16px 16px 50px;
+    padding: 2rem 1.5rem 3rem;
+    margin: 1rem;
   }
 }
 
@@ -105,4 +144,173 @@ hr {
   border: none;
   border-top: 2px dotted #bbb;
   margin: 3rem 0;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.profile-image-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--card-background);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.image-accent {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--action-color), var(--action-color-secondary));
+  border-radius: 50%;
+  border: 3px solid var(--card-background);
+  opacity: 0.9;
+}
+
+.title-section {
+  text-align: center;
+}
+
+.title-section h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+.executive-tagline {
+  font-size: 1.2rem;
+  color: var(--muted-text);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+/* Enhanced typography */
+.rubric p {
+  margin-bottom: 1.5rem;
+}
+
+.rubric p:first-child {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .executive-tagline {
+    font-size: 1.1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Career Journey Section */
+.career-journey {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--subtle-border);
+  text-align: center;
+}
+
+.journey-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.journey-path {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 60px;
+}
+
+.step-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.step-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted-text);
+  transition: color 0.2s ease;
+}
+
+.journey-step.active .step-icon {
+  transform: scale(1.1);
+}
+
+.journey-step.active .step-label {
+  color: var(--action-color);
+  font-weight: 600;
+}
+
+.journey-arrow {
+  font-size: 1.2rem;
+  color: var(--muted-text);
+  margin: 0 0.5rem;
+}
+
+.journey-subtitle {
+  font-size: 0.95rem;
+  color: var(--muted-text);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .journey-path {
+    gap: 0.5rem;
+  }
+  
+  .journey-arrow {
+    margin: 0 0.25rem;
+  }
+  
+  .step-icon {
+    font-size: 1.5rem;
+  }
+  
+  .step-label {
+    font-size: 0.8rem;
+  }
 }

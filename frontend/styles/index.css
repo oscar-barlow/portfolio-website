@@ -332,8 +332,30 @@ div.rubric {
 .writing-archive {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
   margin-top: 2rem;
+}
+
+.year-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.year-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--tertiary-color);
+  margin: 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--tertiary-color);
+  opacity: 0.8;
+}
+
+.year-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .archive-post {
@@ -744,6 +766,10 @@ hr {
   
   .archive-post-title {
     font-size: 1.3rem;
+  }
+  
+  .year-heading {
+    font-size: 2rem;
   }
 }
 

@@ -5,16 +5,48 @@
   </head>
   <body class="{{ data.layout }} {{ data.page_class }}">
     {% render "navbar", metadata: site.metadata, resource: resource %}
-
-    <main>
-      <div style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
-        <img src="{{ '/images/oscar.jpg' | relative_url }}" alt="Oscar Barlow" style="width: 33.33%; border-radius: 50%; overflow: hidden; object-fit: cover;">
+    
+    <div class="page-container">
+      <div class="profile-panel">
+        <div class="profile-content">
+          <div class="profile-image-container">
+            <img src="{{ '/images/oscar.jpg' | relative_url }}" alt="Oscar Barlow" class="profile-image">
+          </div>
+          <h1>Oscar Barlow</h1>
+          <div class="profile-intro">
+            {{ content }}
+          </div>
+        </div>
       </div>
-      <h1>Oscar Barlow</h1>
-      <div class="rubric" style="text-align: justify;">
-      {{ content }}
-      </div>
-    </main>
+      
+      <main class="content-panel">
+        <div class="content-area">
+          <div class="home-content">
+            <div class="home-section">
+              <h2>Recent Thinking</h2>
+              <div class="section-accent"></div>
+              <p>Exploring the intersection of technology leadership, AI transformation, and human-centered design.</p>
+              <a href="/posts" class="section-link">View all writing →</a>
+            </div>
+            
+            <div class="home-section">
+              <h2>Latest Posts</h2>
+              <div class="section-accent"></div>
+              <div class="recent-posts">
+                {% assign recent_posts = collections.posts.resources | sort: 'data.date' | reverse | slice: 0, 3 %}
+                {% for post in recent_posts %}
+                  <article class="post-preview">
+                    <h3><a href="{{ post.relative_url }}">{{ post.data.title }}</a></h3>
+                    <time class="post-date">{{ post.data.date | date: "%B %d, %Y" }}</time>
+                    <div class="post-excerpt" data-content="{{ post.content | strip_html | strip_newlines | truncatewords: 100 }}"></div>
+                  </article>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
     <!-- 100% privacy-first analytics -->
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript>

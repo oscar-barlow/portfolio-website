@@ -6,11 +6,26 @@
   <body class="{{ data.layout }} {{ data.page_class }}">
     {% render 'navbar', metadata: site.metadata, resource: resource %}
 
-    <main>
-      <h1 style="text-align: left">{{ data.title }}</h1>
-      <h4>{{ data.date }}</h4>
-      {{ content }}
-    </main>
+    <div class="content-page">
+      <main class="content-main">
+        <article class="post-article">
+          <header class="post-header">
+            {% render 'page_header', title: data.title, date: data.date %}
+          </header>
+          <div class="post-separator">
+            <div class="brand-shape-tiny"></div>
+          </div>
+          <div class="post-content">
+            {{ content }}
+          </div>
+          <footer class="post-footer">
+            <div class="post-signature">
+              <div class="brand-shape-tiny"></div>
+            </div>
+          </footer>
+        </article>
+      </main>
+    </div>
     <!-- 100% privacy-first analytics -->
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript>

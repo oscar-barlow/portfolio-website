@@ -1,5 +1,12 @@
-<nav class="main-nav">
-  <ul>
+<nav class="sidebar-nav">
+  {% if resource.relative_url == '/' %}
+    <div class="nav-brand-element">
+      <div class="brand-shape"></div>
+    </div>
+  {% else %}
+    <img src="{{ '/images/oscar.jpg' | relative_url }}" alt="Oscar Barlow" class="nav-brand">
+  {% endif %}
+  <ul class="nav-links">
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
     <li><a href="{{ '/posts' | relative_url }}">Writing</a></li>
     <li><a href="https://github.com/oscar-barlow/CV/releases/latest" class="cv-link">CV</a></li>

@@ -1,15 +1,21 @@
 <!doctype html>
-    <html lang="{{ site.locale }}">
-      <head>
-        {% render "head", metadata: site.metadata, title: data.title %}
-      </head>
-      <body class="{{ data.layout }} {{ data.page_class }}">
-        {% render "navbar", metadata: site.metadata, resource: resource %}
+<html lang="{{ site.locale }}">
+  <head>
+    {% render "head", metadata: site.metadata, title: data.title %}
+  </head>
+  <body class="{{ data.layout }} {{ data.page_class }}">
+    {% render "navbar", metadata: site.metadata, resource: resource %}
     
-        <main>
-          <h1>Posts</h1>
+    <div class="content-page">
+      <main class="content-main">
+        <div class="page-header">
+          {% render 'page_header', title: 'Writing' %}
+        </div>
+        <div class="content-body">
           {{ content }}
-        </main>
+        </div>
+      </main>
+    </div>
     <!-- 100% privacy-first analytics -->
       <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
       <noscript>

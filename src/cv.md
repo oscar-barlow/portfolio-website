@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Curriculum Vitae"
-description: "Professional experience and qualifications of Oscar Barlow, innovative technology leader specializing in AI, data engineering, and inclusive team building."
 ---
 
 <div class="cv-container">

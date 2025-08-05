@@ -11,8 +11,8 @@
     "npm": ">=10.0.0"
   },
   "dependencies": {
-    "strip-ansi": "^7.1.0",
-    "string-width": "^7.2.0"
+    "string-width": "^7.2.0",
+    "strip-ansi": "^7.1.0"
   },
   "devDependencies": {
     "esbuild": "^0.25.8",

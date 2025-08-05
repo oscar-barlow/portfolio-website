@@ -1034,3 +1034,251 @@ hr {
     padding: 1.5rem 1rem;
   }
 }
+
+/* CV Page Styles */
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.cv-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.loading-brand-mark {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.loading-brand-mark .brand-shape {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--tertiary-color), var(--action-color));
+  border-radius: 8px;
+  position: relative;
+  animation: brandPulse 2s ease-in-out infinite;
+}
+
+.loading-brand-mark .brand-shape::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+}
+
+@keyframes brandPulse {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: rotate(45deg) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.cv-error {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--muted-text);
+}
+
+.cv-error h2 {
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.cv-error a {
+  color: var(--action-color);
+  font-weight: 500;
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cv-separator {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  opacity: 0.6;
+}
+
+.cv-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--subtle-border);
+}
+
+.cv-signature {
+  display: flex;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+.cv-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.cv-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted-text);
+  margin: 0;
+  font-weight: 500;
+}
+
+.cv-email {
+  font-size: 1.1rem;
+  margin: 1rem 0 0 0;
+}
+
+.cv-email a {
+  color: var(--action-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.cv-email a:hover {
+  color: var(--action-color-secondary);
+  text-decoration: underline;
+}
+
+.cv-download {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.cv-pdf-link {
+  color: var(--muted-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.cv-pdf-link:hover {
+  color: var(--action-color);
+  border-bottom-color: var(--action-color);
+}
+
+.cv-body {
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.cv-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 3rem 0 1.5rem 0;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.cv-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--tertiary-color);
+  border-radius: 2px;
+}
+
+.cv-subsection-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 2rem 0 1rem 0;
+}
+
+.cv-list {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.cv-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.cv-list li::marker {
+  color: var(--tertiary-color);
+}
+
+.cv-body p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.cv-body strong {
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.cv-body em {
+  color: var(--action-color);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Responsive CV styles */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 1rem 0;
+  }
+  
+  .cv-title {
+    font-size: 2.5rem;
+  }
+  
+  .cv-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .cv-section-title {
+    font-size: 1.7rem;
+    margin: 2.5rem 0 1rem 0;
+  }
+  
+  .cv-subsection-title {
+    font-size: 1.3rem;
+  }
+  
+  .cv-body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-title {
+    font-size: 2rem;
+  }
+  
+  .cv-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .cv-list {
+    padding-left: 1rem;
+  }
+}

@@ -105,7 +105,7 @@ h1 {
 }
 
 .brand-shape:hover {
-  transform: rotate(45deg) scale(1.1);
+  animation: brandMarkContinuous 2s ease-in-out infinite;
 }
 
 .brand-shape::after {
@@ -340,7 +340,7 @@ div.rubric {
 }
 
 .brand-shape-small:hover {
-  transform: rotate(45deg) scale(1.1);
+  animation: brandMarkContinuous 2s ease-in-out infinite;
 }
 
 .brand-shape-small::after {
@@ -508,7 +508,7 @@ div.rubric {
 }
 
 .brand-shape-tiny:hover {
-  transform: rotate(45deg) scale(1.2);
+  animation: brandMarkContinuous 2s ease-in-out infinite;
   opacity: 1;
 }
 
@@ -1075,6 +1075,24 @@ hr {
   height: 12px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
+}
+
+@keyframes brandMarkContinuous {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.15);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 @keyframes brandPulse {

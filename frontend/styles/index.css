@@ -1244,15 +1244,27 @@ hr {
 /* Responsive CV styles */
 @media (max-width: 768px) {
   .cv-container {
-    padding: 1rem 0;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+  }
+  
+  .cv-header {
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
   }
   
   .cv-title {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   
   .cv-subtitle {
     font-size: 1.1rem;
+  }
+  
+  .cv-email {
+    font-size: 1rem;
+    margin: 1rem 0;
   }
   
   .cv-section-title {
@@ -1266,16 +1278,45 @@ hr {
   
   .cv-body {
     font-size: 1rem;
+    padding: 0 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .cv-container {
+    padding: 1.5rem 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .cv-header {
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  
   .cv-title {
     font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .cv-subtitle {
+    font-size: 1rem;
+  }
+  
+  .cv-email {
+    font-size: 0.95rem;
   }
   
   .cv-section-title {
     font-size: 1.5rem;
+    margin: 2rem 0 0.75rem 0;
+  }
+  
+  .cv-subsection-title {
+    font-size: 1.2rem;
+  }
+  
+  .cv-body {
+    padding: 0;
   }
   
   .cv-list {

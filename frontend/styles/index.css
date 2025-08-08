@@ -105,7 +105,7 @@ h1 {
 }
 
 .brand-shape:hover {
-  transform: rotate(45deg) scale(1.1);
+  animation: brandMarkContinuous 2s ease-in-out infinite;
 }
 
 .brand-shape::after {
@@ -340,7 +340,7 @@ div.rubric {
 }
 
 .brand-shape-small:hover {
-  transform: rotate(45deg) scale(1.1);
+  animation: brandMarkContinuous 2s ease-in-out infinite;
 }
 
 .brand-shape-small::after {
@@ -508,7 +508,7 @@ div.rubric {
 }
 
 .brand-shape-tiny:hover {
-  transform: rotate(45deg) scale(1.2);
+  animation: brandMarkContinuous 2s ease-in-out infinite;
   opacity: 1;
 }
 
@@ -1045,6 +1045,8 @@ hr {
 .cv-loading {
   text-align: center;
   padding: 4rem 2rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .loading-brand-mark {
@@ -1077,6 +1079,24 @@ hr {
   border-radius: 50%;
 }
 
+@keyframes brandMarkContinuous {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.15);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
 @keyframes brandPulse {
   0%, 100% { 
     transform: rotate(0deg) scale(1);
@@ -1086,6 +1106,19 @@ hr {
     transform: rotate(45deg) scale(1.1);
     opacity: 1;
   }
+}
+
+.cv-error,
+.cv-fallback,
+.cv-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cv-error.show,
+.cv-fallback.show,
+.cv-content.show {
+  opacity: 1;
 }
 
 .cv-error {
@@ -1244,15 +1277,27 @@ hr {
 /* Responsive CV styles */
 @media (max-width: 768px) {
   .cv-container {
-    padding: 1rem 0;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+  }
+  
+  .cv-header {
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
   }
   
   .cv-title {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   
   .cv-subtitle {
     font-size: 1.1rem;
+  }
+  
+  .cv-email {
+    font-size: 1rem;
+    margin: 1rem 0;
   }
   
   .cv-section-title {
@@ -1266,16 +1311,45 @@ hr {
   
   .cv-body {
     font-size: 1rem;
+    padding: 0 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .cv-container {
+    padding: 1.5rem 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .cv-header {
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  
   .cv-title {
     font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .cv-subtitle {
+    font-size: 1rem;
+  }
+  
+  .cv-email {
+    font-size: 0.95rem;
   }
   
   .cv-section-title {
     font-size: 1.5rem;
+    margin: 2rem 0 0.75rem 0;
+  }
+  
+  .cv-subsection-title {
+    font-size: 1.2rem;
+  }
+  
+  .cv-body {
+    padding: 0;
   }
   
   .cv-list {

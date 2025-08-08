@@ -1045,6 +1045,8 @@ hr {
 .cv-loading {
   text-align: center;
   padding: 4rem 2rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .loading-brand-mark {
@@ -1104,6 +1106,19 @@ hr {
     transform: rotate(45deg) scale(1.1);
     opacity: 1;
   }
+}
+
+.cv-error,
+.cv-fallback,
+.cv-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cv-error.show,
+.cv-fallback.show,
+.cv-content.show {
+  opacity: 1;
 }
 
 .cv-error {

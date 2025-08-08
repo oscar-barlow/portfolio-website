@@ -6,7 +6,7 @@ class CVLoader {
   constructor() {
     this.cache = null;
     this.cacheTime = null;
-    this.cacheDuration = 5 * 60 * 1000; // 5 minutes
+    this.cacheDuration = 3 * 60 * 60 * 1000; // 3 hours
     this.pdfUrl = null;
   }
 
@@ -18,46 +18,65 @@ class CVLoader {
     const errorEl = document.getElementById('cv-error');
     const contentEl = document.getElementById('cv-content');
 
-    try {
-      // Fetch PDF URL first
-      await this.fetchPdfUrl();
-      
-      // Check cache first
-      if (this.cache && this.cacheTime && (Date.now() - this.cacheTime < this.cacheDuration)) {
-        this.displayCV(this.cache.htmlContent, this.cache.title, this.cache.email);
-        return;
-      }
+    // Check cache first - if available, hide loading and show content immediately
+    if (this.cache && this.cacheTime && (Date.now() - this.cacheTime < this.cacheDuration)) {
+      loadingEl.style.display = 'none';
+      this.displayCV(this.cache.htmlContent, this.cache.title, this.cache.email);
+      // Still fetch PDF URL in background to update links
+      this.fetchPdfUrl();
+      return;
+    }
 
-      // Fetch LaTeX file from GitHub
-      const response = await fetch('https://raw.githubusercontent.com/oscar-barlow/CV/master/CV.tex');
+    try {
+
+      // For non-cached content, start both operations in parallel
+      const pdfUrlPromise = this.fetchPdfUrl();
+      const contentPromise = this.fetchLatexContent();
       
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-      
-      const latexContent = await response.text();
-      
-      // Convert LaTeX to HTML using simplified parser
-      const { htmlContent, title, email } = this.convertLatex(latexContent);
-      
-      // Cache the result
-      this.cache = { htmlContent, title, email };
-      this.cacheTime = Date.now();
-      
-      this.displayCV(htmlContent, title, email);
+      // Wait for both operations
+      await Promise.all([pdfUrlPromise, contentPromise]);
       
     } catch (error) {
       console.error('Error loading CV:', error);
       const fallbackEl = document.getElementById('cv-fallback');
-      loadingEl.style.display = 'none';
       
-      // Show fallback with download links instead of just error message
-      if (fallbackEl) {
-        fallbackEl.style.display = 'block';
-      } else {
-        errorEl.style.display = 'block';
-      }
+      // Smooth transition to fallback/error
+      loadingEl.style.opacity = '0';
+      setTimeout(() => {
+        loadingEl.style.display = 'none';
+        
+        if (fallbackEl) {
+          fallbackEl.style.display = 'block';
+          setTimeout(() => fallbackEl.classList.add('show'), 10);
+        } else {
+          errorEl.style.display = 'block';
+          setTimeout(() => errorEl.classList.add('show'), 10);
+        }
+      }, 300);
     }
+  }
+
+  /**
+   * Fetches and processes LaTeX content from GitHub
+   */
+  async fetchLatexContent() {
+    const response = await fetch('https://raw.githubusercontent.com/oscar-barlow/CV/master/CV.tex');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    const latexContent = await response.text();
+    
+    // Convert LaTeX to HTML using simplified parser
+    const { htmlContent, title, email } = this.convertLatex(latexContent);
+    
+    // Cache the result
+    this.cache = { htmlContent, title, email };
+    this.cacheTime = Date.now();
+    
+    // Display the content
+    this.displayCV(htmlContent, title, email);
   }
 
   /**
@@ -240,9 +259,21 @@ class CVLoader {
       </footer>
     `;
     
+    // Set content and prepare for transition
     contentEl.innerHTML = wrappedContent;
-    loadingEl.style.display = 'none';
     contentEl.style.display = 'block';
+    
+    // Smooth transition: fade out loading, fade in content
+    if (loadingEl.style.display !== 'none') {
+      loadingEl.style.opacity = '0';
+      setTimeout(() => {
+        loadingEl.style.display = 'none';
+        contentEl.classList.add('show');
+      }, 300);
+    } else {
+      // If loading was already hidden (cached content), show immediately
+      contentEl.classList.add('show');
+    }
     
     // Update download links after content is rendered
     this.updateDownloadLinks();

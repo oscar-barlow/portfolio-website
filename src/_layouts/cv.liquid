@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="{{ site.locale }}">
+  <head>
+    {% render "head", metadata: site.metadata, title: data.title %}
+  </head>
+  <body class="{{ data.layout }} {{ data.page_class }}">
+    {% render "navbar", metadata: site.metadata, resource: resource %}
+
+    <main class="content-page">
+      <div class="content-main">
+        <div class="cv-container">
+          <div id="cv-loading" class="cv-loading">
+            <div class="loading-brand-mark">
+              <div class="brand-shape"></div>
+            </div>
+            <p>Loading...</p>
+          </div>
+          
+          <div id="cv-error" class="cv-error" style="display: none;">
+            <h2>Unable to Load CV</h2>
+            <p>There was an issue fetching the latest CV. You can view it directly on <a href="https://github.com/oscar-barlow/CV/releases/latest">GitHub</a>.</p>
+          </div>
+          
+          <div id="cv-fallback" class="cv-fallback" style="display: none;">
+            <header class="cv-header">
+              <h1 class="cv-title">Oscar Barlow</h1>
+              <p class="cv-email"><a href="mailto:hi@oscarbarlow.com">hi@oscarbarlow.com</a></p>
+              <p class="cv-subtitle">Curriculum Vitae</p>
+              <p class="cv-download">
+                <a href="#" class="cv-pdf-link cv-download-link" target="_blank">
+                  PDF ↓
+                </a>
+              </p>
+            </header>
+            <div class="cv-separator">
+              <div class="brand-shape-tiny"></div>
+            </div>
+            <div class="cv-body">
+              <p>Unable to load the latest CV content dynamically. You can:</p>
+              <ul>
+                <li><a href="#" class="cv-download-link" target="_blank">Download the PDF version</a></li>
+                <li><a href="https://github.com/oscar-barlow/CV" target="_blank">View the source on GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <noscript>
+            <div class="cv-fallback">
+              <header class="cv-header">
+                <h1 class="cv-title">Oscar Barlow</h1>
+                <p class="cv-email"><a href="mailto:hi@oscarbarlow.com">hi@oscarbarlow.com</a></p>
+                <p class="cv-subtitle">Curriculum Vitae</p>
+                <p class="cv-download">
+                  <a href="#" class="cv-pdf-link cv-download-link" target="_blank">
+                    PDF ↓
+                  </a>
+                </p>
+              </header>
+              <div class="cv-separator">
+                <div class="brand-shape-tiny"></div>
+              </div>
+              <div class="cv-body">
+                <p>JavaScript is required to load the latest CV content. You can:</p>
+                <ul>
+                  <li><a href="#" class="cv-download-link" target="_blank">Download the PDF version</a></li>
+                  <li><a href="https://github.com/oscar-barlow/CV" target="_blank">View the source on GitHub</a></li>
+                </ul>
+              </div>
+            </div>
+          </noscript>
+          
+          <div id="cv-content" class="cv-content" style="display: none;">
+            <!-- CV content will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>

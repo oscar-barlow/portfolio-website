@@ -33,7 +33,7 @@ title: "Curriculum Vitae"
     <div class="cv-body">
       <p>Unable to load the latest CV content dynamically. You can:</p>
       <ul>
-        <li><a href="https://github.com/oscar-barlow/CV/releases/latest/download/CV.pdf" target="_blank">Download the PDF version</a></li>
+        <li><a href="#" class="cv-download-link" target="_blank">Download the PDF version</a></li>
         <li><a href="https://github.com/oscar-barlow/CV" target="_blank">View the source on GitHub</a></li>
       </ul>
     </div>
@@ -46,7 +46,7 @@ title: "Curriculum Vitae"
         <p class="cv-email"><a href="mailto:hi@oscarbarlow.com">hi@oscarbarlow.com</a></p>
         <p class="cv-subtitle">Curriculum Vitae</p>
         <p class="cv-download">
-          <a href="https://github.com/oscar-barlow/CV/releases/latest/download/CV.pdf" target="_blank" class="cv-pdf-link">
+          <a href="#" class="cv-pdf-link cv-download-link" target="_blank">
             PDF ↓
           </a>
         </p>
@@ -57,7 +57,7 @@ title: "Curriculum Vitae"
       <div class="cv-body">
         <p>JavaScript is required to load the latest CV content. You can:</p>
         <ul>
-          <li><a href="https://github.com/oscar-barlow/CV/releases/latest/download/CV.pdf" target="_blank">Download the PDF version</a></li>
+          <li><a href="#" class="cv-download-link" target="_blank">Download the PDF version</a></li>
           <li><a href="https://github.com/oscar-barlow/CV" target="_blank">View the source on GitHub</a></li>
         </ul>
       </div>
@@ -75,6 +75,7 @@ class CVLoader {
     this.cache = null;
     this.cacheTime = null;
     this.cacheDuration = 5 * 60 * 1000; // 5 minutes
+    this.pdfUrl = null;
   }
 
   async fetchCV() {
@@ -83,6 +84,9 @@ class CVLoader {
     const contentEl = document.getElementById('cv-content');
 
     try {
+      // Fetch PDF URL first
+      await this.fetchPdfUrl();
+      
       // Check cache first
       if (this.cache && this.cacheTime && (Date.now() - this.cacheTime < this.cacheDuration)) {
         this.displayCV(this.cache.htmlContent, this.cache.title, this.cache.email);
@@ -119,6 +123,42 @@ class CVLoader {
         errorEl.style.display = 'block';
       }
     }
+  }
+
+  async fetchPdfUrl() {
+    try {
+      // Use GitHub API to get latest release info
+      const response = await fetch('https://api.github.com/repos/oscar-barlow/CV/releases/latest');
+      
+      if (response.ok) {
+        const release = await response.json();
+        const tag = release.tag_name;
+        
+        if (tag) {
+          this.pdfUrl = `https://github.com/oscar-barlow/CV/releases/download/${tag}/Oscar.Barlow.CV.${tag}.pdf`;
+        }
+      }
+      
+      // Fallback if we can't determine the URL
+      if (!this.pdfUrl) {
+        this.pdfUrl = 'https://github.com/oscar-barlow/CV/releases/latest';
+      }
+      
+      // Update all download links
+      this.updateDownloadLinks();
+      
+    } catch (error) {
+      console.warn('Could not fetch PDF URL, using fallback:', error);
+      this.pdfUrl = 'https://github.com/oscar-barlow/CV/releases/latest';
+      this.updateDownloadLinks();
+    }
+  }
+
+  updateDownloadLinks() {
+    const downloadLinks = document.querySelectorAll('.cv-download-link');
+    downloadLinks.forEach(link => {
+      link.href = this.pdfUrl;
+    });
   }
 
   convertLatex(latexContent) {
@@ -229,7 +269,7 @@ class CVLoader {
         ${email ? `<p class="cv-email"><a href="mailto:${email}">${email}</a></p>` : ''}
         <p class="cv-subtitle">Curriculum Vitae</p>
         <p class="cv-download">
-          <a href="https://github.com/oscar-barlow/CV/releases/latest/download/CV.pdf" target="_blank" class="cv-pdf-link">
+          <a href="${this.pdfUrl || 'https://github.com/oscar-barlow/CV/releases/latest'}" class="cv-pdf-link cv-download-link" target="_blank">
             PDF ↓
           </a>
         </p>
@@ -250,6 +290,9 @@ class CVLoader {
     contentEl.innerHTML = wrappedContent;
     loadingEl.style.display = 'none';
     contentEl.style.display = 'block';
+    
+    // Update download links after content is rendered
+    this.updateDownloadLinks();
   }
 }
 

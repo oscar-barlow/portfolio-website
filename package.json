@@ -4,7 +4,13 @@
   "private": true,
   "scripts": {
     "esbuild": "node esbuild.config.js --minify",
-    "esbuild-dev": "node esbuild.config.js --watch"
+    "esbuild-dev": "node esbuild.config.js --watch",
+    "test": "vitest --watch",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest --watch",
+    "dev": "concurrently \"yarn esbuild-dev\" \"yarn test:watch\" --names \"build,test\" --prefix name"
   },
   "engines": {
     "node": ">=20.0.0",
@@ -15,14 +21,19 @@
     "strip-ansi": "^7.1.0"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "concurrently": "^9.2.0",
     "esbuild": "^0.25.8",
     "glob": "^11.0.3",
+    "jsdom": "^26.1.0",
     "postcss": "^8.5.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.1",
     "postcss-load-config": "^5.0.3",
     "postcss-preset-env": "^10.2.4",
     "read-cache": "^1.0.0",
-    "spellchecker-cli": "^7.0.0"
+    "spellchecker-cli": "^7.0.0",
+    "vitest": "^3.2.4"
   }
 }

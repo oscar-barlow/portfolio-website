@@ -37,7 +37,13 @@ const esbuildOptions = {
   ],
   globOptions: {
     excludeFilter: /\.(dsd|lit)\.css$/
-  }
+  },
+  external: [
+    // Exclude test dependencies from bundle
+    'vitest',
+    '@vitest/*',
+    'jsdom'
+  ]
 }
 
 build(esbuildOptions)

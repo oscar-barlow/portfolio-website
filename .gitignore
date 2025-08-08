@@ -38,3 +38,7 @@ yarn-debug.log*
 
 # Spellcheck
 spag.junit.xml
+coverage/
+
+# Test coverage
+coverage/

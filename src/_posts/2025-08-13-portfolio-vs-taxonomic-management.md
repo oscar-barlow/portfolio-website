@@ -3,7 +3,7 @@ layout: post
 title: The cosmic weevil is in the wrong place on your organogram
 date: 2025-08-13
 ---
-![Cosmic Weevil]({{ site.url }}/images/weevil.jpeg)
+![Cosmic Weevil]({{ "/images/weevil.jpeg" | relative_url }})
 
 Imagine a lone botanist studying high-altitude lichens on a remote, windswept plateau in the Atacama Desert. One day, she spots something impossibly out of place: a beetle. It's breathtaking, with a carapace that swirls with the deep blues and purples of a distant nebula, dotted with tiny, shimmering silver flecks that look like stars. It has a long, elegant snout, a key feature of a weevil. She nicknames it the 'Cosmic Weevil'.
 

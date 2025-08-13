@@ -274,6 +274,13 @@ div.rubric {
   margin: 0 auto;
 }
 
+.content-main img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+
 .page-header {
   margin-bottom: 3rem;
   position: relative;

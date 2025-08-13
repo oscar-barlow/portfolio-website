@@ -25,5 +25,7 @@ The project lead announces to the team that the project must be postponed, indef
 
 When you choose to understand something as belonging to taxonomy or as part of a portfolio, you are making a trade-off. Taxonomies are highly legible, but inflexible. I needed to introduce the absurd concept of a genus being 'busy' to make the story of the cosmic weevil work[^1]. Portfolios are flexible, they are less constrained by organising logic then taxonomies. But the more a portfolio tends towards being a grab-bag, the harder it is for outsiders to make sense of. My particular interest is in organisational contexts, where I suspect projects are handled taxonomically when they should be considered as part of a portfolio. It can land you in absurdity. Where is the cosmic weevil on your organogram, and what’s the cost of leaving it there?
 
+I wrote this post after reading [Make an Org Chart You Want to Ship — Advice from Linear on How Heirloom Tomatoes Should Inspire Team Design](https://review.firstround.com/make-an-org-chart-you-want-to-ship-advice-from-linear-on-how-heirloom-tomatoes-should-inspire-team-design/) and letting it roll around my head for a while.
+
 [^1]: There is such a thing as taxonomic revision, as in the case of _[Scrophulariaceae](https://en.wikipedia.org/wiki/Scrophulariaceae)_, but is rather different from what I described. It's a lot more robust, for one thing.
 

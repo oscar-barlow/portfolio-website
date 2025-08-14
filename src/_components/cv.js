@@ -280,8 +280,8 @@ class CVLoader {
   }
 }
 
-// Export for testing
-if (typeof module !== 'undefined' && module.exports) {
+// Export for testing in Node.js environment
+if (typeof window === 'undefined' && typeof module !== 'undefined' && module.exports) {
   module.exports = CVLoader;
 } else {
   console.log('CV.js: Script loaded');

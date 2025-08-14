@@ -10,18 +10,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [24.4.x]
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js 22
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 22
         cache: 'yarn'
 
     - name: Install dependencies
@@ -34,7 +30,6 @@ jobs:
       run: make spellcheck
 
     - name: Upload test coverage
-      if: matrix.node-version == '20.x'
       uses: codecov/codecov-action@v4
       with:
         file: ./coverage/lcov.info

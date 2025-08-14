@@ -280,15 +280,5 @@ class CVLoader {
   }
 }
 
-// Export for testing
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = CVLoader;
-} else {
-  // Initialize CV loader when page loads - but only if CV container exists
-  document.addEventListener('DOMContentLoaded', () => {
-    if (document.querySelector('.cv-container')) {
-      const cvLoader = new CVLoader();
-      cvLoader.fetchCV();
-    }
-  });
-}
+// Export for tests and modules
+export default CVLoader;

@@ -280,20 +280,5 @@ class CVLoader {
   }
 }
 
-// Export for testing in Node.js environment
-if (typeof window === 'undefined' && typeof module !== 'undefined' && module.exports) {
-  module.exports = CVLoader;
-} else {
-  console.log('CV.js: Script loaded');
-  // Initialize CV loader when page loads - but only if CV container exists
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log('CV.js: DOMContentLoaded fired');
-    const container = document.querySelector('.cv-container');
-    console.log('CV.js: Container found:', !!container);
-    if (container) {
-      console.log('CV.js: Initializing CVLoader');
-      const cvLoader = new CVLoader();
-      cvLoader.fetchCV();
-    }
-  });
-}
+// Export for tests and modules
+export default CVLoader;

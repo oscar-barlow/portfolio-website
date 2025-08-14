@@ -34,6 +34,7 @@ const build = require("./config/esbuild.defaults.js")
 const esbuildOptions = {
   entryPoints: [
     "./frontend/javascript/index.js",
+    "./src/_components/cv-init.js",
     "./src/_components/cv.js"
   ],
   plugins: [

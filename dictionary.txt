@@ -1,8 +1,10 @@
 100k
 1860s
+Akira
 AmigoAI
 Bezos
 checkmark
+Chiara
 counterfactuals
 Critchlow's
 CRUD-esque

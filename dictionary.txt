@@ -3,6 +3,7 @@
 AmigoAI
 Bezos
 checkmark
+CommonCog
 counterfactuals
 Critchlow's
 CRUD-esque
@@ -35,6 +36,7 @@ relative_url
 Roose
 Scrophulariaceae
 skillset
+Speedrunning
 Squarespace
 subnet
 Superforecasting

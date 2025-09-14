@@ -30,7 +30,7 @@ jobs:
       run: make spellcheck
 
     - name: Upload test coverage
-      uses: codecov/codecov-action@v4
+      uses: codecov/codecov-action@v5
       with:
         file: ./coverage/lcov.info
         flags: javascript

@@ -10,6 +10,7 @@ counterfactuals
 Critchlow's
 CRUD-esque
 Cyrtotrachelus
+DDD
 disintermediated
 disintermediation
 disintermediators
@@ -24,6 +25,8 @@ Hoel's
 human-centric
 iMessage
 Larsson
+LLM
+LLM-assisted
 LLMs
 misallocation
 NotebookLM
@@ -36,6 +39,7 @@ reintermediate
 reintermediation
 relative_url
 Roose
+SaaS
 Scrophulariaceae
 skillset
 Speedrunning

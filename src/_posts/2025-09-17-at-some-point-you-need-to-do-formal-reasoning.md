@@ -15,13 +15,13 @@ Just to briefly recap: building a software system for logistics around the conce
 Bringing this back to using AI in software development, here's a quote from Evans' talk:
 > We're used to just hearing words and, you know, we get the gist of what's being said, you get the meaning of what I'm saying but [we're] not paying enough attention to the words themselves...
 
-When you look at a popular SaaS product that's been cloned by someone prompting a coding agent, that's what you're looking at: some code that has been produced by a machine that gets the gist[^2] of what you say.
+When you look at a popular SaaS product that's been cloned by someone prompting a coding agent, that's what you're looking at: some code that has been produced by a machine that gets the gist[^2] of what you say. The code is functional but in reality not yet useful, because it is only partially grappling with the general rules, and not at all with edge cases. That's as far as gist can take you.
 
 To move beyond 'gist', GitHub have published an [open source toolkit for spec-driven development](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/):
 > ## Where we're headed
 We’re moving from “code is the source of truth” to “intent is the source of truth.” With AI the specification becomes the source of truth and determines what gets built. 
 
-Grand, but the emphasis on intent is not quite right in my view. Intent can be better or worse defined. If you are going to define your intent well - really well - you are writing a formal specification. A written specification that allows you to precisely define your intent may as well be code. There is no getting around writing formal specifications for formal systems. And if you're writing a formal specification, you are doing formal reasoning.
+Grand, but the emphasis on intent is not quite right in my view. Intent can be better or worse defined. If you are going to define your intent well - really well - you are writing a formal specification. A written specification that allows you to precisely define your intent may as well be code. There is no getting around writing detailed formal specifications for formal systems, if those sytems are going to have contact with the real world. And if you're writing a formal specification, you are doing formal reasoning.
 
 Let's connect this to skills loss. A commonly-voiced anxiety about LLM-assisted coding is that developers will forget how to write code. This is probably true, but it's not worrisome. A precise, formal spec interpreted by an LLM is just another level of abstraction. As developers have begun working with higher-level languages, they've forgotten things about how lower levels of the stack work. This is a normal part of technological development. And supposing the developers do need to work in lower levels of the stack in future; they will learn how to do so in much the same way as they do today - including, by using LLMs.
 

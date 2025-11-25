@@ -5,6 +5,7 @@ output
 .bridgetown-metadata
 .bridgetown-webpack
 .routes.json
+tmp/
 
 # Dependency folders
 node_modules

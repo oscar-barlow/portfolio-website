@@ -26,7 +26,7 @@
     "concurrently": "^9.2.1",
     "esbuild": "^0.25.11",
     "glob": "^11.1.0",
-    "jsdom": "^27.1.0",
+    "jsdom": "^27.2.0",
     "postcss": "^8.5.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.1",

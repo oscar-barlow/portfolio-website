@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Risk, Uncertainty and Innovation"
+title: "Risk, uncertainty and innovation"
 date: 2025-09-02
 ---
 These 3 articles from Vaughan Tan [^1] about (formal) risk, uncertainty and innovation are great:

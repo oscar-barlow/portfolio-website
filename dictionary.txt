@@ -1,5 +1,6 @@
 100k
 1860s
+architecting
 Akira
 AmigoAI
 Bezos
@@ -18,13 +19,18 @@ Disintermediators
 dna
 dwarves
 elytra
+Eschner
 frictious
+GMail
 Gorcenski
 Hoel
 Hoel's
+Hounshell
 human-centric
+ICYMI
 iMessage
 Larsson
+lifecycle
 LLM
 LLM-assisted
 LLMs
@@ -46,6 +52,8 @@ Speedrunning
 Squarespace
 subnet
 Superforecasting
+Tane
 Tetlock
+undersupply
 Werner
 WhatsApp

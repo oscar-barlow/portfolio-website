@@ -15,7 +15,7 @@ Just to briefly recap: building a software system for logistics around the conce
 Bringing this back to using AI in software development, here's a quote from Evans' talk:
 > We're used to just hearing words and, you know, we get the gist of what's being said, you get the meaning of what I'm saying but [we're] not paying enough attention to the words themselves...
 
-When you look at a popular SaaS product that's been cloned by someone prompting a coding agent, that's what you're looking at: some code that has been produced by a machine that gets the gist[^2] of what you say. The code is functional but in reality not yet useful, because it is only partially grappling with the general rules, and not at all with edge cases. That's as far as gist can take you.
+When you look at a popular SaaS product that's been cloned by someone prompting a coding agent, that's what you're looking at: some code that has been produced by a machine that gets the gist[^1] of what you say. The code is functional but in reality not yet useful, because it is only partially grappling with the general rules, and not at all with edge cases. That's as far as gist can take you.
 
 To move beyond 'gist', GitHub have published an [open source toolkit for spec-driven development](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/):
 > ## Where we're headed

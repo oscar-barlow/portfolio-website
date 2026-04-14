@@ -788,6 +788,27 @@ hr {
   border-bottom-color: var(--action-color);
 }
 
+.section-links-inline {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-link-divider {
+  color: var(--muted-text);
+}
+
+.page-links-inline {
+  margin-top: 0.75rem;
+}
+
+.post-links-inline {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1rem 0;
+}
+
 .focus-list {
   list-style: none;
   padding: 0;

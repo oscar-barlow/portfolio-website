@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ site.locale }}">
   <head>
-    {% render "head", metadata: site.metadata, title: data.title %}
+    {% render "head", metadata: site.metadata, title: data.title, description: data.description %}
   </head>
   <body class="{{ data.layout }} {{ data.page_class }}">
     {% render "navbar", metadata: site.metadata, resource: resource %}
@@ -26,7 +26,11 @@
               <h2>Writing</h2>
               <div class="section-accent"></div>
               <p>On AI, organisations, and thinking clearly in uncertain terrain.</p>
-              <a href="/writing" class="section-link">View all writing →</a>
+              <p class="section-links-inline">
+                <a href="{{ '/feed.xml' | relative_url }}" class="section-link">RSS</a>
+                <span class="section-link-divider">|</span>
+                <a href="{{ '/writing' | relative_url }}" class="section-link">View all writing →</a>
+              </p>
             </div>
 
             <div class="home-section">

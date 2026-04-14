@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "LinkedIn and solipsistic peacocking"
+description: "LinkedIn remains fundamentally solipsistic self-promotion despite platform changes, with low critical thinking and information literacy compared to earlier internet spaces."
 date: 2025-04-23
 ---
 [Emily Gorcenski](https://www.linkedin.com/in/emily-gorcenski-0a3830200/) [observes about LinkedIn](https://www.linkedin.com/posts/activity-7320684700736409600-Xnb1?utm_source=share&utm_medium=member_desktop&rcm=ACoAACMZUAcBooUIscfDaTq5qvSkjNzZ0dJcE5U):

@@ -2,6 +2,7 @@
 layout: post
 date: 2026-04-14
 title: "Zones of want"
+description: "A framework for wants: easily obtainable, requiring steps, impossible and dissolvable, and impossible but deliberately embraced, shifting focus from action to attitude."
 ---
 
 Some things you want, and you can just have them. You want to read a magazine, so you go to the shop and buy one. Then you take it home and read it. Done. Easy. A little humdrum. 

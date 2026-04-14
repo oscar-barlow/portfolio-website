@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Following Larsson in structuring teams"
+description: "Team sizing principles from Larsson: managers oversee six to eight engineers, small subteams cannot function independently, and teams should split as scope expands."
 date: 2024-01-09
 ---
 The chapter right after the introduction of [Larson, W. (2019). _An Elegant Puzzle: Systems of Engineering Management._ Stripe Press](https://lethain.com/elegant-puzzle/)[^1] concerns itself with sizing engineering teams. There's a lot in this chapter -- these points are salient for the moment:

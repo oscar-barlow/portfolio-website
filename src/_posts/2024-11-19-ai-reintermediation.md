@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "AI reintermediation - the answer to consumer shadow work"
+description: "Generative AI will reduce consumer 'shadow work' through reintermediation, letting AI handle search and booking coordination rather than users doing it manually."
 date: 2024-11-19
 ---
 Being a consumer in 2024 is work. I think AI will help via reintermediation.

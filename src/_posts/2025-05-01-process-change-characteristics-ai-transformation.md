@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Characteristic change in business processes from AI transformation"
+description: "Business processes shift from discrete database-like operations to fuzzier, varied outcomes as AI increases throughput and variation, reducing outcome tractability."
 date: 2025-05-01
 ---
 Scott Werner notes in [The Coming Knowledge-Work Supply-Chain Crisis](https://worksonmymachine.substack.com/p/the-coming-knowledge-work-supply) that business processes for managing knowledge work ill-suited the amount of throughput it looks like we'll get from using AI:

@@ -21,6 +21,7 @@ dna
 dwarves
 elytra
 Eschner
+eudaimonia
 fati
 frictious
 GMail

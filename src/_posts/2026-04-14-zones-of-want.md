@@ -18,4 +18,4 @@ This brings us to our final zone. You want something, it's impossible, you've en
 
 You can respond to wants by taking action or changing your attitude. As we progress through these zones of want, first to last as I've laid them out, I'd suggest you dial up your focus on attitude and dial down action. 
 
-The above is somewhat informed by Covery's [Circles of Concern and Influence](https://www.modern.works/blog/the-power-of-coveys-circle-of-concern-influence-and-control) exercise. But as for _eudaimonia_, you'll need to look elsewhere. These zones are pragmatic, not normative. And of course, they suppose a level of control over your own life and resource to effect your plans, that not everyone has.
+The above is somewhat informed by Covey's [Circles of Concern and Influence](https://www.modern.works/blog/the-power-of-coveys-circle-of-concern-influence-and-control) exercise. But as for _eudaimonia_, you'll need to look elsewhere. These zones are pragmatic, not normative. And of course, they suppose a level of control over your own life and resource to effect your plans, that not everyone has.

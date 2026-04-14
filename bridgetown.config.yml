@@ -21,6 +21,7 @@ url: "https://www.oscarbarlow.com" # the base hostname & protocol for your site,
 
 permalink: pretty
 template_engine: liquid
+strict_front_matter: true
 
 # Other options you might want to investigate:
 #

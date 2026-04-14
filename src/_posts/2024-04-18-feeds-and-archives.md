@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tickers and archives"
-description: "Contrasts ticker-based information streams with archives: tickers are easy and reactive, while archives require maintenance but support organization and longer-term planning."
+description: "Contrasts ticker-based information streams with archives: tickers are easy and reactive, while archives require maintenance but support organisation and longer-term planning."
 date: 2024-04-18
 ---
 If you watch an old movie about the stock market, you'll see ticker tape: a thin spool of paper that is continuously printed with real-time[^1] information about a stock price. This was revolutionary[^2] in history, and its form - constantly-arriving current information - is common in our world today. Construed as such, we consume a lot of things through 'tickers', including:

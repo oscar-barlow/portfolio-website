@@ -10,12 +10,14 @@ Other things you want, and you can't have them right now. Actually, you can't ev
 
 Or perhaps you don't have to do that first? Perhaps you can find a way to just get the thing you want? Worth exploring. Moving things between zones of want is a great trick, if you can pull it off.
 
-Next, you may want some things that are just impossible. You want a synthesizer-bubble-machine-laptop-thermomix. It doesn't exist. You choose to engage with reality here, or not. Why doesn't your absurd music and joy and food-making device exist? When you find out the reasons, you might continue to want it - or you might not. Once you engaged with the reality of the want, you discovered that in reality, you do not have this want. This is actually similar to refusing to engage with the reality of the want. In this case, you do not actually (i.e. in reality) want something. Sticking with this want will remain uncomfortable for you.
+Next, you may want some things that are just impossible. You want to have made different choices ten years ago so you can be a professional musician now. You choose to engage with reality here, or not. Why didn't you make those choices back then? When you find out the reasons, you might continue to want this thing - or you might not. Once you engaged with the reality of the want, you discovered that in reality, you do not have this want. 
 
-This brings us to our final zone. You want something, it's impossible, you've engaged with the reality of the want, and you still want it. I want climate change to be fixed - this belongs in this zone. As before, this unfulfilled want causes me discomfort, and this is discomfort that I choose in choosing to keep wanting this. Amor fati.
+This is actually similar to refusing to engage with the reality of the want. In this case, you do not actually (i.e. in reality) want something. Sticking with this want will remain uncomfortable for you.
+
+This brings us to our final zone. You want something, it's impossible, you've engaged with the reality of the want, and you still want it. I want climate change to be fixed - this belongs in this zone. As before, this unfulfilled want causes me discomfort, and this is discomfort that I choose in choosing to keep wanting this. [Amor fati](https://en.wikipedia.org/wiki/Amor_fati).
 
 ***
 
 You can respond to wants by taking action or changing your attitude. As we progress through these zones of want, first to last as I've laid them out, I'd suggest you dial up your focus on attitude and dial down action. 
 
-The above is somewhat informed by Covey's [Circles of Concern and Influence](https://www.modern.works/blog/the-power-of-coveys-circle-of-concern-influence-and-control) exercise. But as for _eudaimonia_, you'll need to look elsewhere. These zones are pragmatic, not normative. And of course, they suppose a level of control over your own life and resource to effect your plans, that not everyone has.
+The above is somewhat informed by Covey's [Circles of Concern and Influence](https://www.modern.works/blog/the-power-of-coveys-circle-of-concern-influence-and-control) exercise. But as for _eudaimonia_, you'll need to look elsewhere. These zones are pragmatic, not normative. 

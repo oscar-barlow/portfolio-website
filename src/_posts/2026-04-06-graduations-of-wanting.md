@@ -16,4 +16,4 @@ This brings us to our final zone. You want something, it's impossible, you've en
 
 ***
 
-You can respond to wants by taking action or changing your attitude. As we progress through the zones of 
+You can respond to wants by taking action or changing your attitude. As we progress through these zones of want, first to last as I've laid them out, I'd suggest you dial up your focus on attitude and dial down action. 

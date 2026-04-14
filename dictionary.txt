@@ -2,6 +2,7 @@
 1860s
 architecting
 Akira
+Amor
 AmigoAI
 Bezos
 checkmark
@@ -20,6 +21,7 @@ dna
 dwarves
 elytra
 Eschner
+fati
 frictious
 GMail
 Gorcenski
@@ -52,6 +54,7 @@ Speedrunning
 Squarespace
 subnet
 Superforecasting
+synthesizer-bubble-machine-laptop-thermomix
 Tane
 Tetlock
 undersupply

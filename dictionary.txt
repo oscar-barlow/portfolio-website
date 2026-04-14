@@ -24,6 +24,7 @@ Eschner
 eudaimonia
 fati
 frictious
+finitude
 GMail
 Gorcenski
 Hoel
@@ -36,7 +37,9 @@ Larsson
 lifecycle
 LLM
 LLM-assisted
+LLM-generated
 LLMs
+llm-generated
 misallocation
 NotebookLM
 onboarding
@@ -46,6 +49,8 @@ peacocking
 PRs
 reintermediate
 reintermediation
+Reframing
+reframing
 relative_url
 Roose
 SaaS
@@ -53,6 +58,7 @@ Scrophulariaceae
 skillset
 Speedrunning
 Squarespace
+subteams
 subnet
 Superforecasting
 Tane

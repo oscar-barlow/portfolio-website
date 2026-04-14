@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Explaining technical debt by analogy"
+description: "Reframing technical debt as strategic investment rather than blight, using analogy to improve understanding between technical and business stakeholders."
 date: 2019-08-14
 ---
 

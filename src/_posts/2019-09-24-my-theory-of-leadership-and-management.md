@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My theories of what leadership and management are"
+description: "Leadership theories covering vision articulation, team resource acquisition and protection, and person management including feedback and expectations."
 date: 2019-09-24
 ---
 

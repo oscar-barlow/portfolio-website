@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Henry Ford, paper stacks, and three buckets of AI work"
+description: "Three buckets for AI integration: personal productivity and product engineering are understood, while AI teammates in back-office processes remain unfamiliar terrain."
 date: 2026-03-03
 ---
 Ford's workers hated his assembly line[^1] and in their diaries expressed how unnatural it felt, and how they resented their deskilling. It took a lot of trial and error to arrive at the assembly line technique[^2]. Ford's continuous experiments with production techniques almost bankrupted him several times over[^3].

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Marking your own homework"
+description: "Engineering leaders should retrospectively examine design decisions via incident analysis, RAID logs, and staffing changes to test assumptions and improve future work."
 date: 2024-02-12
 ---
 Podcasts and newsletters have started doing pieces where they check the accuracy of their predictions[^1]. This seems to be influenced by Tetlock and Gardner's critique in Superforecasting[^2] that pundits don't make predictions that are clearly true or false, and that they never hold themselves accountable. Well, they started.

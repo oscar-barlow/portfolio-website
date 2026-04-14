@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Posts
+title: Writing
 ---
 
 <div class="writing-archive">

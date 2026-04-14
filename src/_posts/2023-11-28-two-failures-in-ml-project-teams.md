@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Two failures in ML project teams"
+description: "Structural failures in machine learning teams: over-dependency of data scientists on engineers versus expecting data scientists to manage entire stack alone."
 date: 2023-11-28
 ---
 There are 2 failures I've noticed in structuring teams in ML projects. I'm construing this context quite broadly here to include engineers who build and maintain systems in which ML models are trained and run, as well as the data scientists who build them[^1].

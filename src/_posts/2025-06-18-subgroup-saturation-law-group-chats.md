@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Subset saturation law of group chats"
+description: "Group chats eventually splinter into subset conversations matching all possible member combinations; saturation degree can indicate cohesion and tie strength."
 date: 2025-06-18
 ---
 

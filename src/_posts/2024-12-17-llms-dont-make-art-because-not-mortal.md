@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Generative AI does not make art because it is not mortal"
+description: "Generative AI cannot produce art in the human sense because it lacks mortality and finitude; artistic choices matter precisely because humans are finite beings."
 date: 2024-12-17
 ---
 

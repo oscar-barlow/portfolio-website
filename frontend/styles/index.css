@@ -531,6 +531,106 @@ div.rubric {
   border-radius: 50%;
 }
 
+/* Subscribe form */
+.subscribe-form-wrapper {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--subtle-border);
+  border-radius: 6px;
+  background: var(--card-background);
+}
+
+.subscribe-heading {
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.embeddable-buttondown-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.embeddable-buttondown-form input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--subtle-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--body-color);
+  background: var(--body-background);
+}
+
+.embeddable-buttondown-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--action-color);
+}
+
+.embeddable-buttondown-form button[type="submit"] {
+  padding: 0.5rem 1.25rem;
+  background: var(--action-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.embeddable-buttondown-form button[type="submit"]:hover {
+  background: var(--action-color-secondary);
+}
+
+.subscribe-attribution {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.8rem;
+  color: var(--muted-text);
+}
+
+.subscribe-attribution a {
+  color: var(--muted-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.subscribe-attribution a:hover {
+  border-bottom-color: var(--muted-text);
+}
+
+/* Writing page subscribe CTA */
+.writing-subscribe .subscribe-form-wrapper {
+  max-width: 480px;
+  margin-top: 0;
+  padding: 1.25rem;
+}
+
+.writing-rss-link {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.95rem;
+  color: var(--muted-text);
+}
+
+/* Post footer subscribe — suppress top margin, form sits just below the border */
+.post-footer .subscribe-form-wrapper {
+  margin-top: 0;
+}
+
+.post-footer-link {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  color: var(--muted-text);
+}
+
+.post-footer-link:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
 .content-body {
   font-size: 1.1rem;
   line-height: 1.7;

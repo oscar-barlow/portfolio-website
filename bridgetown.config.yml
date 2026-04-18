@@ -33,3 +33,6 @@ strict_front_matter: true
 # timezone: America/Los_Angeles
 # pagination:
 #   enabled: true
+
+feed:
+  posts_limit: 100

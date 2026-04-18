@@ -19,9 +19,13 @@
             {{ content }}
           </div>
           <footer class="post-footer">
-            <p class="section-links-inline post-links-inline">
-              <a href="{{ '/feed.xml' | relative_url }}" class="section-link">RSS</a>
-              <span class="section-link-divider">|</span>
+            <div class="post-subscribe">
+              {% render 'subscribe_form', heading: 'Enjoyed this? Sign up to get notified of new posts.' %}
+            </div>
+            <p class="post-footer-link">
+              Or subscribe via <a href="{{ '/feed.xml' | relative_url }}" class="section-link">RSS</a>
+            </p>
+            <p class="post-footer-link">
               <a href="{{ '/writing' | relative_url }}" class="section-link">More writing →</a>
             </p>
             <div class="post-signature">

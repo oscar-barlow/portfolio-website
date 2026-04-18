@@ -10,8 +10,11 @@
       <main class="content-main">
         <div class="page-header">
           {% render 'page_header', title: 'Writing' %}
-          <p class="section-links-inline page-links-inline">
-            <a href="{{ '/feed.xml' | relative_url }}" class="section-link">RSS</a>
+        </div>
+        <div class="writing-subscribe">
+          {% render 'subscribe_form', heading: 'Get new posts by email.' %}
+          <p class="writing-rss-link">
+            Or subscribe via <a href="{{ '/feed.xml' | relative_url }}" class="section-link">RSS</a>
           </p>
         </div>
         <div class="content-body">

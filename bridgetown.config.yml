@@ -35,4 +35,4 @@ strict_front_matter: true
 #   enabled: true
 
 feed:
-  posts_limit: 100
+  postslimit: 100

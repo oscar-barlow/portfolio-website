@@ -1,0 +1,9 @@
+.git
+.github
+.vscode
+.cursorrules
+.DS_Store
+node_modules
+vendor
+*.test.tsx
+testFixtures.ts

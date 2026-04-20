@@ -1,0 +1,26 @@
+name: Deploy Email Sender to Val Town
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog-email/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: blog-email
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - run: deno task test
+      - name: Install vt CLI
+        run: deno install -g -A jsr:@valtown/vt
+      - name: Push to Val Town
+        run: vt push
+        env:
+          VAL_TOWN_API_KEY: ${{ secrets.VAL_TOWN_API_KEY }}

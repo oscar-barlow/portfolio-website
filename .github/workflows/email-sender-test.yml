@@ -1,0 +1,20 @@
+name: Email Sender Tests
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'blog-email/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: blog-email
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - run: deno task test

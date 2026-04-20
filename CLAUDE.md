@@ -171,3 +171,57 @@ This document should evolve alongside the website. When new patterns emerge or g
 4. Test changes across the entire site to prevent regressions
 
 Remember: The goal is to maintain Oscar Barlow's distinctive and professional brand identity while ensuring excellent user experience and technical implementation quality.
+
+---
+
+## Email Sender (`blog-email/`)
+
+This subdirectory is a Val Town TypeScript/Deno microservice. It runs on a cron schedule, checks the site's Atom feed for new posts, and creates Buttondown draft emails automatically. It is deployed to Val Town via CI on merge to main.
+
+### Platform
+
+- Runs on **Deno** in a serverless Val Town context — not Node.js. Do not use Node-specific APIs.
+- Use `Deno.env.get('KEY_NAME')` for environment variables. **Never hardcode secrets.**
+- Use `https://esm.sh` for npm/Deno dependencies to ensure compatibility.
+- Only use try/catch when there is a clear local resolution. Let errors bubble up with full context — avoid catches that merely log or swallow errors.
+
+### Trigger type
+
+This project uses a **cron trigger** — a function that runs on a schedule with no HTTP request/response cycle:
+
+```ts
+export default async function () {
+  // Scheduled task code
+}
+```
+
+The entry point is `emailNewPost.cron.tsx`. Files named `*.cron.tsx` are recognised by Val Town as cron triggers.
+
+### SQLite
+
+Val Town's hosted SQLite is used to track which posts have already been emailed (idempotency). Use the client from `https://esm.town/v/stevekrouse/sqlite`:
+
+```ts
+import { sqlite } from "https://esm.town/v/stevekrouse/sqlite";
+await sqlite.execute(`CREATE TABLE IF NOT EXISTS sent_posts (id TEXT PRIMARY KEY)`);
+const result = await sqlite.execute(`SELECT * FROM sent_posts WHERE id = ?`, [postId]);
+```
+
+When changing a table's schema, rename the table (e.g. append `_2`) rather than using ALTER TABLE — Val Town's SQLite has limited ALTER support.
+
+### Code standards
+
+- Write TypeScript with proper types and interfaces for all data structures.
+- Prefer official SDKs and libraries over hand-rolled API calls. If unsure about a library's API, ask for documentation rather than guessing.
+- Follow modern ES6+ and functional conventions where practical.
+- Comment complex logic; don't comment obvious operations.
+
+### Deployment
+
+CI deploys automatically via `vt push` on merge to main when files in `blog-email/` change. The `.vt/` directory contains the Val Town project ID — do not delete or modify it. To deploy manually, run `make deploy-blog-email` from the repo root.
+
+### Common gotchas
+
+- **Deno, not Node**: `process`, `require`, and other Node globals are not available.
+- **Schema changes**: Always rename SQLite tables rather than altering them.
+- **No frontend**: This is a pure backend cron job. Utilities like `serveFile`, `parseProject`, and `readFile` from Val Town's std library are not applicable here.

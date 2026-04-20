@@ -64,4 +64,10 @@ validate-frontmatter:
 	done; \
 	exit $$status
 
-.PHONY: test test-watch test-ui test-coverage dev
+test-blog-email:
+	cd blog-email && deno task test
+
+deploy-blog-email:
+	cd blog-email && deno task deploy
+
+.PHONY: test test-watch test-ui test-coverage dev test-blog-email deploy-blog-email

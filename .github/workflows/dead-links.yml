@@ -17,4 +17,4 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
-          args: --verbose --no-progress --config lychee.toml 'src/**/*.md' 'output/**/*.html' --exclude-path README.md --exclude-path src/writing.md
+          args: --verbose --no-progress 'src/**/*.md' 'output/**/*.html' --exclude-path README.md --exclude-path src/writing.md

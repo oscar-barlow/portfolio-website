@@ -35,6 +35,8 @@ describe('CVLoader', () => {
       expect(cvLoader.cacheTime).toBe(null);
       expect(cvLoader.cacheDuration).toBe(3 * 60 * 60 * 1000);
       expect(cvLoader.pdfUrl).toBe(null);
+      expect(cvLoader.pdfFilePrefix).toBe('Oscar.Barlow.Leadership.CV');
+      expect(cvLoader.legacyPdfFilePrefix).toBe('Oscar.Barlow.CV');
     });
   });
 
@@ -108,7 +110,13 @@ describe('CVLoader', () => {
   describe('PDF URL Fetching', () => {
     it('should fetch PDF URL from GitHub API successfully', async () => {
       const mockRelease = {
-        tag_name: '2025-01-01'
+        tag_name: '2025-01-01',
+        assets: [
+          {
+            name: 'Oscar.Barlow.Leadership.CV.2025-01-01.pdf',
+            browser_download_url: 'https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.Leadership.CV.2025-01-01.pdf'
+          }
+        ]
       };
       const mockResponse = {
         ok: true,
@@ -121,7 +129,49 @@ describe('CVLoader', () => {
       await cvLoader.fetchPdfUrl();
 
       expect(fetch).toHaveBeenCalledWith('https://api.github.com/repos/oscar-barlow/CV/releases/latest');
+      expect(cvLoader.pdfUrl).toBe('https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.Leadership.CV.2025-01-01.pdf');
+      expect(updateLinksSpy).toHaveBeenCalled();
+    });
+
+    it('should fall back to the legacy PDF asset when the leadership asset is unavailable', async () => {
+      const mockRelease = {
+        tag_name: '2025-01-01',
+        assets: [
+          {
+            name: 'Oscar.Barlow.CV.2025-01-01.pdf',
+            browser_download_url: 'https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.CV.2025-01-01.pdf'
+          }
+        ]
+      };
+      const mockResponse = {
+        ok: true,
+        json: () => Promise.resolve(mockRelease)
+      };
+
+      fetch.mockResolvedValue(mockResponse);
+      const updateLinksSpy = vi.spyOn(cvLoader, 'updateDownloadLinks').mockImplementation(() => {});
+
+      await cvLoader.fetchPdfUrl();
+
       expect(cvLoader.pdfUrl).toBe('https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.CV.2025-01-01.pdf');
+      expect(updateLinksSpy).toHaveBeenCalled();
+    });
+
+    it('should construct the leadership PDF URL when release assets are unavailable', async () => {
+      const mockRelease = {
+        tag_name: '2025-01-01'
+      };
+      const mockResponse = {
+        ok: true,
+        json: () => Promise.resolve(mockRelease)
+      };
+
+      fetch.mockResolvedValue(mockResponse);
+      const updateLinksSpy = vi.spyOn(cvLoader, 'updateDownloadLinks').mockImplementation(() => {});
+
+      await cvLoader.fetchPdfUrl();
+
+      expect(cvLoader.pdfUrl).toBe('https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.Leadership.CV.2025-01-01.pdf');
       expect(updateLinksSpy).toHaveBeenCalled();
     });
 
@@ -199,7 +249,15 @@ describe('CVLoader', () => {
   describe('Integration Tests', () => {
     it('should complete full CV loading cycle', async () => {
       const mockLatexContent = '\\\\section{Skills}\\\\textbf{JavaScript}';
-      const mockRelease = { tag_name: '2025-01-01' };
+      const mockRelease = {
+        tag_name: '2025-01-01',
+        assets: [
+          {
+            name: 'Oscar.Barlow.Leadership.CV.2025-01-01.pdf',
+            browser_download_url: 'https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.Leadership.CV.2025-01-01.pdf'
+          }
+        ]
+      };
       
       fetch
         .mockResolvedValueOnce({ // GitHub API call first
@@ -214,7 +272,7 @@ describe('CVLoader', () => {
       await cvLoader.fetchCV();
 
       expect(cvLoader.cache).toBeDefined();
-      expect(cvLoader.pdfUrl).toBe('https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.CV.2025-01-01.pdf');
+      expect(cvLoader.pdfUrl).toBe('https://github.com/oscar-barlow/CV/releases/download/2025-01-01/Oscar.Barlow.Leadership.CV.2025-01-01.pdf');
       expect(mockElements.content.style.display).toBe('block');
     });
   });

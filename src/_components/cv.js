@@ -8,6 +8,8 @@ class CVLoader {
     this.cacheTime = null;
     this.cacheDuration = 3 * 60 * 60 * 1000; // 3 hours
     this.pdfUrl = null;
+    this.pdfFilePrefix = 'Oscar.Barlow.Leadership.CV';
+    this.legacyPdfFilePrefix = 'Oscar.Barlow.CV';
   }
 
   /**
@@ -92,7 +94,14 @@ class CVLoader {
         const tag = release.tag_name;
         
         if (tag) {
-          this.pdfUrl = `https://github.com/oscar-barlow/CV/releases/download/${tag}/Oscar.Barlow.CV.${tag}.pdf`;
+          const expectedAssetName = `${this.pdfFilePrefix}.${tag}.pdf`;
+          const legacyAssetName = `${this.legacyPdfFilePrefix}.${tag}.pdf`;
+          const matchingAsset = release.assets?.find(asset =>
+            asset.name === expectedAssetName || asset.name === legacyAssetName
+          );
+
+          this.pdfUrl = matchingAsset?.browser_download_url ||
+            `https://github.com/oscar-barlow/CV/releases/download/${tag}/${expectedAssetName}`;
         }
       }
       

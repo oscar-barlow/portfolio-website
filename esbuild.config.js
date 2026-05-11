@@ -35,8 +35,11 @@ const esbuildOptions = {
   entryPoints: [
     "./frontend/javascript/index.js",
     "./src/_components/cv-init.js",
-    "./src/_components/cv.js"
+    "./src/_components/cv.js",
+    "./src/_components/mermaid-init.js"
   ],
+  format: "esm",
+  splitting: true,
   plugins: [
     // add new plugins here...
   ],

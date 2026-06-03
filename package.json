@@ -35,6 +35,6 @@
     "postcss-preset-env": "^11.2.1",
     "read-cache": "^1.0.0",
     "spellchecker-cli": "^7.0.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.0"
   }
 }

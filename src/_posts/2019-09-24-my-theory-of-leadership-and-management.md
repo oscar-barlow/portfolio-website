@@ -5,7 +5,7 @@ description: "Leadership theories covering vision articulation, team resource ac
 date: 2019-09-24
 ---
 
-I've read [The Mythical Man Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) and [The Phoenix Project](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/) recently. They're both excellent, and have a surprising amount in common despite the 30-odd year gap between their publication. In particular, both are apparently about IT but are actually about management and leadership.
+I've read [The Mythical Man Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) and [The Phoenix Project](https://itrevolution.com/product/the-phoenix-project/) recently. They're both excellent, and have a surprising amount in common despite the 30-odd year gap between their publication. In particular, both are apparently about IT but are actually about management and leadership.
 
 As I was coming to the end of _The Mythical Man Month_, I realised that I have quite well developed theories about what leadership, team management, and person management are. The lists are unordered, as they were scribbled in a Kindle note as I was finishing a chapter.
 

@@ -1257,19 +1257,19 @@
     estree-walker "^3.0.3"
     magic-string "^0.30.21"
 
-"@vitest/pretty-format@3.2.4":
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/@vitest/pretty-format/-/pretty-format-3.2.4.tgz#3c102f79e82b204a26c7a5921bf47d534919d3b4"
-  integrity sha512-IVNZik8IVRJRTr9fxlitMKeJeXFFFN0JaB9PHPGQ8NKQbGpfjlTx9zO4RefN8gp7eqjNy8nyK3NZmBzOPeIxtA==
-  dependencies:
-    tinyrainbow "^2.0.0"
-
 "@vitest/pretty-format@4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@vitest/pretty-format/-/pretty-format-4.1.0.tgz#b6ccf2868130a647d24af3696d58c09a95eb83c1"
   integrity sha512-3RZLZlh88Ib0J7NQTRATfc/3ZPOnSUn2uDBUoGNn5T36+bALixmzphN26OUD3LRXWkJu4H0s5vvUeqBiw+kS0A==
   dependencies:
     tinyrainbow "^3.0.3"
+
+"@vitest/pretty-format@4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@vitest/pretty-format/-/pretty-format-4.1.9.tgz#885cfe9fcb6ff3df4409ea66192cc1fb23d62fae"
+  integrity sha512-s0iufns3iIFitdgm+YR7g1whCAaGtXz459VS9/PqyKDEEFgYIhsHOQmXgIgDuYCt7DeQmiZT0Qe2OA2p4ZPu5A==
+  dependencies:
+    tinyrainbow "^3.1.0"
 
 "@vitest/runner@4.1.0":
   version "4.1.0"
@@ -1294,27 +1294,18 @@
   resolved "https://registry.yarnpkg.com/@vitest/spy/-/spy-4.1.0.tgz#b9143a63cca83de34ac1777c733f8561b73fa9ba"
   integrity sha512-pz77k+PgNpyMDv2FV6qmk5ZVau6c3R8HC8v342T2xlFxQKTrSeYw9waIJG8KgV9fFwAtTu4ceRzMivPTH6wSxw==
 
-"@vitest/ui@^3.2.4":
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/@vitest/ui/-/ui-3.2.4.tgz#df8080537c1dcfeae353b2d3cb3301d9acafe04a"
-  integrity sha512-hGISOaP18plkzbWEcP/QvtRW1xDXF2+96HbEX6byqQhAUbiS5oH6/9JwW+QsQCIYON2bI6QZBF+2PvOmrRZ9wA==
+"@vitest/ui@^4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@vitest/ui/-/ui-4.1.9.tgz#8aeb5af7295ea04ef1064873334ced04ce20d646"
+  integrity sha512-U/cRvtqfEPj27FI1n9cyUvi4vXXdcLhjJiI+InYKdk8hP4VrS6RXOjGL7rfFaeBc37iRKANsR6eEzIoC7lmgBQ==
   dependencies:
-    "@vitest/utils" "3.2.4"
+    "@vitest/utils" "4.1.9"
     fflate "^0.8.2"
-    flatted "^3.3.3"
+    flatted "^3.4.2"
     pathe "^2.0.3"
-    sirv "^3.0.1"
-    tinyglobby "^0.2.14"
-    tinyrainbow "^2.0.0"
-
-"@vitest/utils@3.2.4":
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/@vitest/utils/-/utils-3.2.4.tgz#c0813bc42d99527fb8c5b138c7a88516bca46fea"
-  integrity sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA==
-  dependencies:
-    "@vitest/pretty-format" "3.2.4"
-    loupe "^3.1.4"
-    tinyrainbow "^2.0.0"
+    sirv "^3.0.2"
+    tinyglobby "^0.2.15"
+    tinyrainbow "^3.1.0"
 
 "@vitest/utils@4.1.0":
   version "4.1.0"
@@ -1324,6 +1315,15 @@
     "@vitest/pretty-format" "4.1.0"
     convert-source-map "^2.0.0"
     tinyrainbow "^3.0.3"
+
+"@vitest/utils@4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@vitest/utils/-/utils-4.1.9.tgz#0184c7e6eb3234739b2b6b3b985f78d1ed823ee1"
+  integrity sha512-A51o8ymO5PpqlWNnBP9ZHPXDIpuMtTLlGSjN7la4US+LJzoUMyhwjA5QXlm39JexgwHKW4Xjs8Z2d3dLCXOeuA==
+  dependencies:
+    "@vitest/pretty-format" "4.1.9"
+    convert-source-map "^2.0.0"
+    tinyrainbow "^3.1.0"
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -2202,7 +2202,7 @@ find-up-simple@^1.0.0:
   resolved "https://registry.yarnpkg.com/find-up-simple/-/find-up-simple-1.0.1.tgz#18fb90ad49e45252c4d7fca56baade04fa3fca1e"
   integrity sha512-afd4O7zpqHeRyg4PfDQsXmlDe2PfdHtJt6Akt8jOWaApLOZk5JXs6VMR29lz03pRe9mpykrRCYIYxaJYcfpncQ==
 
-flatted@^3.3.3:
+flatted@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.4.2.tgz#f5c23c107f0f37de8dbdf24f13722b3b98d52726"
   integrity sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==
@@ -2796,11 +2796,6 @@ longest-streak@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/longest-streak/-/longest-streak-3.1.0.tgz#62fa67cd958742a1574af9f39866364102d90cd4"
   integrity sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==
-
-loupe@^3.1.4:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/loupe/-/loupe-3.2.0.tgz#174073ba8e0a1d0d5e43cc08626ed8a19403c344"
-  integrity sha512-2NCfZcT5VGVNX9mSZIxLRkEAegDGBpuQZBy13desuHeVORmBDyAET4TkJr4SjqQy3A8JDofMN6LpkK8Xcm/dlw==
 
 lru-cache@^10.2.0:
   version "10.4.3"
@@ -4088,10 +4083,10 @@ signal-exit@^4.0.1:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
 
-sirv@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/sirv/-/sirv-3.0.1.tgz#32a844794655b727f9e2867b777e0060fbe07bf3"
-  integrity sha512-FoqMu0NCGBLCcAkS1qA+XJIQTR6/JHfQXl+uGteNCQ76T91DMUjPa9xfmeqMY3z80nLSg9yQmNjK0Px6RWsH/A==
+sirv@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-3.0.2.tgz#f775fccf10e22a40832684848d636346f41cd970"
+  integrity sha512-2wcC/oGxHis/BoHkkPwldgiPSYcpZK3JU28WoMVv55yHJgcZ8rlXvuG9iZggz+sU1d4bRgIGASwyWqjxu3FM0g==
   dependencies:
     "@polka/url" "^1.0.0-next.24"
     mrmime "^2.0.0"
@@ -4316,7 +4311,7 @@ tinyexec@^1.0.1, tinyexec@^1.0.2:
   resolved "https://registry.yarnpkg.com/tinyexec/-/tinyexec-1.2.4.tgz#ae45bb2edebda94c70f4ea897e0f1243e470db71"
   integrity sha512-SHf/r48b7vOrjve9PxJo3MN5v5yuyjHvdUcrQffT3WXMUfnGmHDVbC4k3sHJaJTgZCwpUplIaAo5ANtMyp3YHg==
 
-tinyglobby@^0.2.14, tinyglobby@^0.2.15, tinyglobby@^0.2.17:
+tinyglobby@^0.2.15, tinyglobby@^0.2.17:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.17.tgz#562a9a6c9eb2b3b123d39719f9af5bb44fcd7631"
   integrity sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==
@@ -4329,7 +4324,7 @@ tinyrainbow@^2.0.0:
   resolved "https://registry.yarnpkg.com/tinyrainbow/-/tinyrainbow-2.0.0.tgz#9509b2162436315e80e3eee0fcce4474d2444294"
   integrity sha512-op4nsTR47R6p0vMUUoYl/a+ljLFVtlfaXkLQmqfLR1qHma1h/ysYk4hEXZ880bf2CYgTskvTa/e196Vd5dDQXw==
 
-tinyrainbow@^3.0.3:
+tinyrainbow@^3.0.3, tinyrainbow@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/tinyrainbow/-/tinyrainbow-3.1.0.tgz#1d8a623893f95cf0a2ddb9e5d11150e191409421"
   integrity sha512-Bf+ILmBgretUrdJxzXM0SgXLZ3XfiaUuOj/IKQHuTXip+05Xn+uyEYdVg0kYDipTBcLrCVyUzAPz7QmArb0mmw==

@@ -20,7 +20,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 - [Bridgetown Gem](https://rubygems.org/gems/bridgetown)
   - `gem install bridgetown -N`
 - [Node](https://nodejs.org)
-  - `>= 12`
+  - see `.nvmrc` for the exact version (`nvm use` picks it up automatically)
 - [Yarn](https://yarnpkg.com)
 
 ## Install

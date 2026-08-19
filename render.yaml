@@ -3,6 +3,8 @@ services:
     name: portfolio-website
     runtime: static
     buildCommand: make
+    # Render infers the Node version from .nvmrc (no explicit NODE_VERSION here —
+    # setting one would create a second, driftable source of truth).
     staticPublishPath: ./output
     pullRequestPreviewsEnabled: true
     envVars:

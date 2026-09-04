@@ -60,6 +60,16 @@ When making design decisions with the user that deviate from existing brand guid
 - Proper HTML fallbacks for browser compatibility
 - Maintains brand consistency across all browser touchpoints
 
+#### Pull-Quote / OG Image Generator (September 2026)
+**Decision**: Generate branded share images from an optional `pull_quote` post frontmatter field
+**Implementation**:
+- `scripts/generate-og-images.mjs` — standalone Node/ESM build step using Satori (VDOM → SVG) and `@resvg/resvg-js` (SVG → PNG); no headless browser
+- Renders a 1080×1080 square (primary LinkedIn asset) and a 1200×630 landscape (`og:image`) into `output/images/pull-quotes/`
+- Uses the favicon's teal→burgundy gradient — no new brand colours (see `brand.md` → "Pull-Quote / Share Image Asset")
+- Inter loaded from the `@fontsource/inter` package (the same typeface the site serves)
+- `head.liquid` takes an optional `image` param; `post.liquid` sets it to the generated `-og.png` when a `pull_quote` is present, else the default `/images/oscar.jpg`
+- Runs from the `Makefile` (`build`/`deploy`) after Bridgetown writes `output/`
+
 ## Code Quality Standards
 
 ### CSS Architecture
@@ -139,6 +149,7 @@ When making design decisions with the user that deviate from existing brand guid
 ### Recent Updates
 - **August 2024**: Enhanced profile photo with gradient border and rotation animation
 - **August 2024**: Created brand mark favicon system with multiple format support
+- **September 2026**: Added pull-quote / OG image generator (branded share images from `pull_quote` frontmatter)
 
 ### Future Considerations
 - Template system for recurring content types

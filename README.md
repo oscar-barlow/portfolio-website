@@ -52,6 +52,29 @@ bin/bridgetown console
 
 > Learn more: [Bridgetown CLI Documentation](https://www.bridgetownrb.com/docs/command-line-usage)
 
+## Writing posts
+
+Posts live in `src/_posts/` as `YYYY-MM-DD-slug.md`. Required frontmatter is
+`layout`, `title`, `description` (50–300 chars), and `date` (validated by
+`make validate-frontmatter`).
+
+Two optional fields produce a branded share image:
+
+```yaml
+pull_quote: "A pithy line from the post."
+pull_quote_attribution: "Oscar Barlow, Infrux"   # optional; not always the author
+```
+
+When `pull_quote` is set, the build generates a 1080×1080 square (for uploading
+directly to a LinkedIn post) and a 1200×630 landscape (used as the post's
+`og:image`) into `output/images/pull-quotes/{slug}.png` and `{slug}-og.png`.
+Posts without `pull_quote` are unaffected. The images regenerate on every build;
+you can also run the generator on its own:
+
+```sh
+node scripts/generate-og-images.mjs
+```
+
 ## Deployment
 
 You can deploy Bridgetown sites on hosts like Render or Vercel as well as traditional web servers by simply building and copying the output folder to your HTML root.

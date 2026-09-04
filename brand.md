@@ -67,6 +67,29 @@
 - Post separators: Tiny brand mark between sections
 - Footer signatures: Tiny brand mark as content separator
 
+### Pull-Quote / Share Image Asset
+
+Branded images generated from a post's `pull_quote` frontmatter, for sharing on
+social platforms (primarily a direct LinkedIn image upload) and as the post's
+`og:image`. Generated at build time by `scripts/generate-og-images.mjs`.
+
+- **Frontmatter** (both optional): `pull_quote` (the quote text; no image is
+  generated without it) and `pull_quote_attribution` (e.g. `Oscar Barlow, Infrux`
+  — not always the site author).
+- **Sizes**: `1080×1080` square (primary — best in the LinkedIn feed) and
+  `1200×630` landscape (used as `og:image`). Written to
+  `output/images/pull-quotes/{slug}.png` and `{slug}-og.png`.
+- **Background**: the favicon / brand-mark gradient —
+  `linear-gradient(135deg, #2F5F5F 0%, #722F37 100%)` (teal → burgundy). No new
+  brand colours are introduced.
+- **Card**: centred rounded rectangle (28px radius), warm off-white `#f6f4f0`,
+  soft shadow.
+- **Quote**: Inter 700, `#1a1a1a` (`--heading-color`), centred, with curly
+  quotes; font size scales down as the quote lengthens so ~200-character quotes
+  still fit.
+- **Attribution**: Inter 400 italic, `#5a5a5a` (`--muted-text`), centred, as
+  `— {attribution}`.
+
 ### Typography System
 
 **Primary Font**: Inter

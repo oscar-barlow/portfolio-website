@@ -3,6 +3,7 @@ layout: post
 title: "My theories of what leadership and management are"
 description: "Leadership theories covering vision articulation, team resource acquisition and protection, and person management including feedback and expectations."
 date: 2019-09-24
+pull_quote: "I was surprised to discover quite how much of management and leadership involves gaining a deeper understanding of yourself."
 ---
 
 I've read [The Mythical Man Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) and [The Phoenix Project](https://itrevolution.com/product/the-phoenix-project/) recently. They're both excellent, and have a surprising amount in common despite the 30-odd year gap between their publication. In particular, both are apparently about IT but are actually about management and leadership.

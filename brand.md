@@ -67,6 +67,36 @@
 - Post separators: Tiny brand mark between sections
 - Footer signatures: Tiny brand mark as content separator
 
+### Pull-Quote / Share Image Asset
+
+Branded images generated from a post's `pull_quote` frontmatter, for sharing on
+social platforms (primarily a direct LinkedIn image upload) and as the post's
+`og:image`. Generated at build time by `scripts/generate-og-images.mjs`.
+
+- **Frontmatter**: `pull_quote` (the quote text; **required** on every post, so
+  every post gets a share image) and `pull_quote_attribution` (optional; e.g.
+  `Oscar Barlow, Infrux` — not always the site author, and omitted on the
+  author's own posts).
+- **Sizes**: `1080×1080` square (primary — best in the LinkedIn feed) and
+  `1200×630` landscape (used as `og:image`). Written to
+  `output/images/pull-quotes/{YYYY-MM-DD}-{slug}.png` and `-og.png` (the date is
+  the post's frontmatter date, matching its URL; it namespaces the files and
+  avoids slug clashes).
+- **Background**: the favicon / brand-mark gradient —
+  `linear-gradient(135deg, #2F5F5F 0%, #722F37 100%)` (teal → burgundy). No new
+  brand colours are introduced.
+- **Card**: centred rounded rectangle (28px radius), warm off-white `#f6f4f0`,
+  soft shadow.
+- **Quote**: Inter 700, `#1a1a1a` (`--heading-color`), centred, with curly
+  quotes; font size scales down as the quote lengthens so ~200-character quotes
+  still fit.
+- **Attribution**: Inter 400 italic, `#5a5a5a` (`--muted-text`), centred, as
+  `— {attribution}` (omitted when there is no attribution).
+- **Call to action**: Inter 500, `#5a5a5a` (`--muted-text`), centred, below the
+  quote — `Read the full post on oscarbarlow.com/writing ->` (the `->` renders as
+  an arrow via Inter's ligature). Drives traffic back to the site when the image
+  is shared on its own.
+
 ### Typography System
 
 **Primary Font**: Inter

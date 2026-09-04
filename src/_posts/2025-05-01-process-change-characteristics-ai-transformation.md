@@ -3,6 +3,7 @@ layout: post
 title: "Characteristic change in business processes from AI transformation"
 description: "Business processes shift from discrete database-like operations to fuzzier, varied outcomes as AI increases throughput and variation, reducing outcome tractability."
 date: 2025-05-01
+pull_quote: "This is a characteristic change in our processes, not just a volume change."
 ---
 Scott Werner notes in [The Coming Knowledge-Work Supply-Chain Crisis](https://worksonmymachine.substack.com/p/the-coming-knowledge-work-supply) that business processes for managing knowledge work ill-suited the amount of throughput it looks like we'll get from using AI:
 > ... our tools aren’t designed for the volume of work AI can generate. In AI Programs While I Sleep, you can see that I am already underwater with hundreds of AI-generated PRs to review. Our code review tools are designed for reviewing at most 5-10 PRs a day, not 50. You can also see a similar pattern emerge in the other videos having to do with managing user stories, doing product acceptance, and test case validation. Our tools are designed for orders of magnitude less work.

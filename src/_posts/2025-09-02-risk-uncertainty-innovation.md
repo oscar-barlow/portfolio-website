@@ -3,6 +3,7 @@ layout: post
 title: "Risk, uncertainty and innovation"
 description: "Formal risk is rare; confusing uncertainty with risk causes poor decisions. Innovation needs organisational comfort with not-knowing and clear uncertainty types."
 date: 2025-09-02
+pull_quote: "If you think about a situation of uncertainty only in terms of risk, you will misunderstand it."
 ---
 These 3 articles from Vaughan Tan [^1] about (formal) risk, uncertainty and innovation are great:
 

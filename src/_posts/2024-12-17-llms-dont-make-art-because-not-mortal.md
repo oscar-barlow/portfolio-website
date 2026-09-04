@@ -3,6 +3,7 @@ layout: post
 title: "Generative AI does not make art because it is not mortal"
 description: "Generative AI cannot produce art in the human sense because it lacks mortality and finitude; artistic choices matter precisely because humans are finite beings."
 date: 2024-12-17
+pull_quote: "The choices that human artistic creators make - that you make - matter because we are finite beings."
 ---
 
 There's been some debate recently about AI art, whether it will ever count as real art or be worthy of interest. A lot of the 'no' side of the argument has focused on the choices and creativity that creators bring to their work. I think [Erik Hoel's piece](https://www.theintrinsicperspective.com/p/sorry-ted-chiang-humans-arent-very) is informative. Humans are, on the whole, not terribly original. And AIs can be said in some sense to be making creative choices just like humans do. Hoel concludes by identifying a slim[^1] margin of originality and control of distribution channels.

@@ -3,6 +3,7 @@ layout: post
 title: "At some point, you need to do formal reasoning"
 description: "Software is a formal system requiring formal reasoning: LLM-generated gist misses edge cases, so formal specifications remain necessary at higher abstraction levels."
 date: 2025-09-17
+pull_quote: "When you are building software you are building a formal system, and that means at some point you need to do formal reasoning."
 ---
 When you are building software you are building a [formal system](https://www.britannica.com/topic/formal-system), and that means at some point you need to do formal reasoning.
 

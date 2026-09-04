@@ -31,6 +31,15 @@ const CARD_BG = '#f6f4f0'; // off-white card, kin to --body-background #fefcf9
 // Favicon / brand-mark gradient: teal (top-left) -> burgundy (bottom-right).
 const BG_GRADIENT = `linear-gradient(135deg, ${TEAL} 0%, ${BURGUNDY} 100%)`;
 
+// Call to action shown on every image — drives traffic back to the site when
+// the image is shared on its own (e.g. LinkedIn, where the image is not itself
+// clickable, so this is a prompt rather than a live link). Points at the
+// writing index, which is stable across posts.
+// Note: the ASCII "->" is rendered as a proper arrow by Inter's ligature; the
+// U+2192 arrow glyph is not in the fontsource Latin subset (would be tofu), and
+// "->" degrades gracefully to readable text if ligatures are ever disabled.
+const CTA_TEXT = 'Read the full post on oscarbarlow.com/writing ->';
+
 export const FORMATS = {
   square: { width: 1080, height: 1080 }, // primary LinkedIn asset
   og: { width: 1200, height: 630 }, // og:image / link preview
@@ -67,6 +76,30 @@ const DATE_PREFIX = /^\d{4}-\d{2}-\d{2}-(.+)$/;
  * `.md` extension stripped. This matches `resource.data.slug`, which the Liquid
  * layer uses to point og:image at the generated file.
  */
+/**
+ * Normalise a post's `date` frontmatter to a `YYYY-MM-DD` string. gray-matter
+ * (via js-yaml) parses an unquoted `date: 2026-03-03` into a JS Date, and a
+ * quoted one into a string — handle both. This mirrors the date Bridgetown puts
+ * in the URL and in `resource.data.date`, so the image filename lines up with
+ * the path the Liquid layer builds.
+ */
+export function formatPostDate(value) {
+  if (value instanceof Date && !Number.isNaN(value.valueOf())) {
+    return value.toISOString().slice(0, 10);
+  }
+  const m = String(value).match(/^(\d{4}-\d{2}-\d{2})/);
+  if (!m) throw new Error(`Unrecognised post date: ${JSON.stringify(value)}`);
+  return m[1];
+}
+
+/**
+ * The image filename stem: `YYYY-MM-DD-{slug}`. Date-namespacing avoids clashes
+ * between posts that share a slug and keeps files sortable/memorable.
+ */
+export function imageBaseName(date, slug) {
+  return `${formatPostDate(date)}-${slug}`;
+}
+
 export function slugForPost(filename, data = {}) {
   if (data && typeof data.slug === 'string' && data.slug.trim()) {
     return data.slug.trim();
@@ -174,6 +207,25 @@ export function buildTemplate({ quote, attribution, format = 'square' }) {
     });
   }
 
+  // Call to action — drives traffic back to the site when the image is shared.
+  children.push({
+    type: 'div',
+    props: {
+      style: {
+        display: 'flex',
+        justifyContent: 'center',
+        textAlign: 'center',
+        marginTop: isOg ? 26 : 48,
+        fontFamily: 'Inter',
+        fontWeight: 500,
+        fontSize: isOg ? 20 : 24,
+        letterSpacing: '0.01em',
+        color: MUTED,
+      },
+      children: CTA_TEXT,
+    },
+  });
+
   const card = {
     type: 'div',
     props: {
@@ -224,9 +276,11 @@ export async function renderPng({ quote, attribution, format = 'square' }, fonts
 }
 
 /**
- * Read every post in `dir`, returning those with a non-empty pull_quote.
- * Throws if two posts resolve to the same slug (the flat image path has no date
- * to disambiguate, so a collision would silently overwrite).
+ * Read every post in `dir`, returning those with a non-empty pull_quote. Each
+ * result carries a `base` (`YYYY-MM-DD-{slug}`) used for the image filenames.
+ * Throws if two posts resolve to the same `base` — possible when a post's
+ * frontmatter date differs from its filename date — so a collision fails the
+ * build loudly instead of silently overwriting.
  */
 export function parsePosts(dir) {
   const files = readdirSync(dir).filter((f) => /\.(md|markdown)$/i.test(f));
@@ -237,16 +291,21 @@ export function parsePosts(dir) {
     const { data } = matter(raw);
     const quote = data && data.pull_quote;
     if (!quote || !String(quote).trim()) continue;
+    if (!data.date) {
+      throw new Error(`Post ${file} has a pull_quote but no date; a date is required for the image filename.`);
+    }
     const slug = slugForPost(file, data);
-    if (seen.has(slug)) {
+    const base = imageBaseName(data.date, slug);
+    if (seen.has(base)) {
       throw new Error(
-        `Duplicate pull-quote slug "${slug}" from ${file} and ${seen.get(slug)}. ` +
-          `Add a distinct \`slug:\` frontmatter key to one of them.`
+        `Duplicate pull-quote image name "${base}" from ${file} and ${seen.get(base)}. ` +
+          `Give one a distinct \`slug:\` frontmatter key.`
       );
     }
-    seen.set(slug, file);
+    seen.set(base, file);
     posts.push({
       slug,
+      base,
       quote: String(quote).trim(),
       attribution: data.pull_quote_attribution ? String(data.pull_quote_attribution).trim() : '',
       sourceFile: file,
@@ -271,9 +330,9 @@ async function main() {
   for (const post of posts) {
     const square = await renderPng({ quote: post.quote, attribution: post.attribution, format: 'square' }, fonts);
     const og = await renderPng({ quote: post.quote, attribution: post.attribution, format: 'og' }, fonts);
-    writeFileSync(join(outDir, `${post.slug}.png`), square);
-    writeFileSync(join(outDir, `${post.slug}-og.png`), og);
-    console.log(`[og-images] ${post.slug}: wrote ${post.slug}.png (1080x1080) + ${post.slug}-og.png (1200x630)`);
+    writeFileSync(join(outDir, `${post.base}.png`), square);
+    writeFileSync(join(outDir, `${post.base}-og.png`), og);
+    console.log(`[og-images] ${post.slug}: wrote ${post.base}.png (1080x1080) + ${post.base}-og.png (1200x630)`);
   }
   console.log(`[og-images] Done — ${posts.length} post(s) into ${outDir}`);
 }

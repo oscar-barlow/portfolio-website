@@ -3,7 +3,8 @@
   <head>
     {% comment %} Always reset og_image: layout-scope assigns persist across resources in a single build. {% endcomment %}
     {% if data.pull_quote %}
-      {% assign og_image = '/images/pull-quotes/' | append: resource.data.slug | append: '-og.png' %}
+      {% assign og_date = resource.data.date | date: '%Y-%m-%d' %}
+      {% assign og_image = '/images/pull-quotes/' | append: og_date | append: '-' | append: resource.data.slug | append: '-og.png' %}
     {% else %}
       {% assign og_image = '/images/oscar.jpg' %}
     {% endif %}

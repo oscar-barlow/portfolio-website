@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% capture resource_title %}{{ title | strip_html | strip_newlines }}{% endcapture %}
 {% assign page_description = description | default: metadata.description %}
+{% assign og_image = image | default: '/images/oscar.jpg' %}
 <title>
   {% if resource_title != 'Oscar Barlow' -%}
     {{- resource_title | escape }} | {{ metadata.title | escape -}}
@@ -20,12 +21,12 @@
 <meta property="og:title" content="{{ resource_title | strip }}" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{ page_description | escape }}" />
-<meta property="og:image" content="{{ '/images/oscar.jpg' | absolute_url }}" />
+<meta property="og:image" content="{{ og_image | absolute_url }}" />
 <meta property="og:url" content="{{ page.absolute_url }}" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ resource_title | strip | escape }}" />
 <meta name="twitter:description" content="{{ page_description | escape }}" />
-<meta name="twitter:image" content="{{ '/images/oscar.jpg' | absolute_url }}" />
+<meta name="twitter:image" content="{{ og_image | absolute_url }}" />
 {% feed_meta %}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

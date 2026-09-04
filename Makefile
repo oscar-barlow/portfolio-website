@@ -2,12 +2,14 @@ default: deploy
 
 build:
 	./bin/bridgetown build
+	node scripts/generate-og-images.mjs
 
 alphabetise-dictionary:
 	sort -o dictionary.txt dictionary.txt
 
 deploy: deps
 	./bin/bridgetown deploy
+	node scripts/generate-og-images.mjs
 
 deps:
 	bundle install

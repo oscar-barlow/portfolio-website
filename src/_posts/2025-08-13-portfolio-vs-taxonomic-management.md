@@ -3,6 +3,7 @@ layout: post
 title: The cosmic weevil is in the wrong place on your organogram
 description: "Organisations using taxonomic logic for projects that need portfolio flexibility sacrifice pragmatism for legibility; the cosmic weevil metaphor shows the cost."
 date: 2025-08-13
+pull_quote: "Where is the cosmic weevil on your organogram, and what's the cost of leaving it there?"
 ---
 ![Cosmic Weevil]({{ "/images/weevil.jpeg" | relative_url }})
 

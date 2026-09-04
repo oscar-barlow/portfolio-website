@@ -3,6 +3,7 @@ layout: post
 title: "My personal engineering principles"
 description: "Engineers' personal principles: acknowledging cognitive limits, recognising real work as learning and problem-solving, and the value of direct user observation."
 date: 2019-10-23
+pull_quote: "No matter how much it looks like it, 'writing code' is not your actual job."
 ---
 
 _"What are your personal engineering principles?"_

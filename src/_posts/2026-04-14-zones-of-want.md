@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 2026-04-14
+pull_quote: "Moving things between zones of want is a great trick, if you can pull it off."
 title: "Zones of want"
 description: "A framework for wants: easily obtainable, requiring steps, impossible and able to dissolve, and impossible but deliberately embraced, shifting focus from action to attitude."
 ---

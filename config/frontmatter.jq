@@ -9,4 +9,7 @@ has("description") and
 (.description | length >= 50) and
 (.description | length <= 300) and
 has("date") and
-(.date | tostring | test("^[0-9]{4}-[0-9]{2}-[0-9]{2}$"))
+(.date | tostring | test("^[0-9]{4}-[0-9]{2}-[0-9]{2}$")) and
+has("pull_quote") and
+(.pull_quote | type == "string") and
+(.pull_quote | length > 0)

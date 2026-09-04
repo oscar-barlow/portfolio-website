@@ -78,7 +78,9 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
   — not always the site author).
 - **Sizes**: `1080×1080` square (primary — best in the LinkedIn feed) and
   `1200×630` landscape (used as `og:image`). Written to
-  `output/images/pull-quotes/{slug}.png` and `{slug}-og.png`.
+  `output/images/pull-quotes/{YYYY-MM-DD}-{slug}.png` and `-og.png` (the date is
+  the post's frontmatter date, matching its URL; it namespaces the files and
+  avoids slug clashes).
 - **Background**: the favicon / brand-mark gradient —
   `linear-gradient(135deg, #2F5F5F 0%, #722F37 100%)` (teal → burgundy). No new
   brand colours are introduced.
@@ -88,7 +90,11 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
   quotes; font size scales down as the quote lengthens so ~200-character quotes
   still fit.
 - **Attribution**: Inter 400 italic, `#5a5a5a` (`--muted-text`), centred, as
-  `— {attribution}`.
+  `— {attribution}` (omitted when there is no attribution).
+- **Call to action**: Inter 500, `#5a5a5a` (`--muted-text`), centred, below the
+  quote — `Read the full post on oscarbarlow.com/writing ->` (the `->` renders as
+  an arrow via Inter's ligature). Drives traffic back to the site when the image
+  is shared on its own.
 
 ### Typography System
 

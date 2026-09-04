@@ -64,7 +64,8 @@ When making design decisions with the user that deviate from existing brand guid
 **Decision**: Generate branded share images from an optional `pull_quote` post frontmatter field
 **Implementation**:
 - `scripts/generate-og-images.mjs` — standalone Node/ESM build step using Satori (VDOM → SVG) and `@resvg/resvg-js` (SVG → PNG); no headless browser
-- Renders a 1080×1080 square (primary LinkedIn asset) and a 1200×630 landscape (`og:image`) into `output/images/pull-quotes/`
+- Renders a 1080×1080 square (primary LinkedIn asset) and a 1200×630 landscape (`og:image`) into `output/images/pull-quotes/` as `{YYYY-MM-DD}-{slug}.png` / `-og.png` (date from frontmatter, matching the post URL)
+- Each image carries a grey call-to-action (`Read the full post on oscarbarlow.com/writing ->`) to recover traffic from shares
 - Uses the favicon's teal→burgundy gradient — no new brand colours (see `brand.md` → "Pull-Quote / Share Image Asset")
 - Inter loaded from the `@fontsource/inter` package (the same typeface the site serves)
 - `head.liquid` takes an optional `image` param; `post.liquid` sets it to the generated `-og.png` when a `pull_quote` is present, else the default `/images/oscar.jpg`

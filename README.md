@@ -55,22 +55,21 @@ bin/bridgetown console
 ## Writing posts
 
 Posts live in `src/_posts/` as `YYYY-MM-DD-slug.md`. Required frontmatter is
-`layout`, `title`, `description` (50–300 chars), and `date` (validated by
-`make validate-frontmatter`).
-
-Two optional fields produce a branded share image:
+`layout`, `title`, `description` (50–300 chars), `date`, and `pull_quote` — all
+validated by `make validate-frontmatter`.
 
 ```yaml
-pull_quote: "A pithy line from the post."
-pull_quote_attribution: "Oscar Barlow, Infrux"   # optional; not always the author
+pull_quote: "A pithy line from the post."          # required
+pull_quote_attribution: "Oscar Barlow, Infrux"     # optional; not always the author
 ```
 
-When `pull_quote` is set, the build generates a 1080×1080 square (for uploading
-directly to a LinkedIn post) and a 1200×630 landscape (used as the post's
-`og:image`) into `output/images/pull-quotes/{YYYY-MM-DD}-{slug}.png` and
-`-og.png` (the date is the post's frontmatter date). Each image carries a
-call-to-action back to the site. Posts without `pull_quote` are unaffected. The
-images regenerate on every build; you can also run the generator on its own:
+`pull_quote` drives a branded share image: the build generates a 1080×1080
+square (for uploading directly to a LinkedIn post) and a 1200×630 landscape
+(used as the post's `og:image`) into
+`output/images/pull-quotes/{YYYY-MM-DD}-{slug}.png` and `-og.png` (the date is
+the post's frontmatter date). Each image carries a call-to-action back to the
+site. The images regenerate on every build; you can also run the generator on
+its own:
 
 ```sh
 node scripts/generate-og-images.mjs

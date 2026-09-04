@@ -61,7 +61,7 @@ When making design decisions with the user that deviate from existing brand guid
 - Maintains brand consistency across all browser touchpoints
 
 #### Pull-Quote / OG Image Generator (September 2026)
-**Decision**: Generate branded share images from an optional `pull_quote` post frontmatter field
+**Decision**: Generate branded share images from a required `pull_quote` post frontmatter field (enforced by `config/frontmatter.jq`; `pull_quote_attribution` remains optional)
 **Implementation**:
 - `scripts/generate-og-images.mjs` — standalone Node/ESM build step using Satori (VDOM → SVG) and `@resvg/resvg-js` (SVG → PNG); no headless browser
 - Renders a 1080×1080 square (primary LinkedIn asset) and a 1200×630 landscape (`og:image`) into `output/images/pull-quotes/` as `{YYYY-MM-DD}-{slug}.png` / `-og.png` (date from frontmatter, matching the post URL)

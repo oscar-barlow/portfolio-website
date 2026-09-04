@@ -73,9 +73,10 @@ Branded images generated from a post's `pull_quote` frontmatter, for sharing on
 social platforms (primarily a direct LinkedIn image upload) and as the post's
 `og:image`. Generated at build time by `scripts/generate-og-images.mjs`.
 
-- **Frontmatter** (both optional): `pull_quote` (the quote text; no image is
-  generated without it) and `pull_quote_attribution` (e.g. `Oscar Barlow, Infrux`
-  — not always the site author).
+- **Frontmatter**: `pull_quote` (the quote text; **required** on every post, so
+  every post gets a share image) and `pull_quote_attribution` (optional; e.g.
+  `Oscar Barlow, Infrux` — not always the site author, and omitted on the
+  author's own posts).
 - **Sizes**: `1080×1080` square (primary — best in the LinkedIn feed) and
   `1200×630` landscape (used as `og:image`). Written to
   `output/images/pull-quotes/{YYYY-MM-DD}-{slug}.png` and `-og.png` (the date is

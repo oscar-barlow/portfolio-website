@@ -3448,11 +3448,6 @@ picomatch@^4.0.3, picomatch@^4.0.4:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.4.tgz#fd6f5e00a143086e074dffe4c924b8fb293b0589"
   integrity sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==
 
-pify@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
-  integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
-
 pkg-dir@^9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-9.0.0.tgz#79d0ca53023fa93f848ba960d75df4476e1fbb1f"
@@ -3807,12 +3802,10 @@ quotation@^2.0.0:
   resolved "https://registry.yarnpkg.com/quotation/-/quotation-2.0.3.tgz#b94c05128209a63b40b4e20e0f8f1a38adea7e0b"
   integrity sha512-yEc24TEgCFLXx7D4JHJJkK4JFVtatO8fziwUxY4nB/Jbea9o9CVS3gt22mA0W7rPYAGW2fWzYDSOtD94PwOyqA==
 
-read-cache@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/read-cache/-/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
-  integrity sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==
-  dependencies:
-    pify "^2.3.0"
+read-cache@^1.0.0, read-cache@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/read-cache/-/read-cache-1.0.2.tgz#3bfa40e27574216bd893276ced75d81e6649ca52"
+  integrity sha512-/peqiBB/n07gQGLsWaHho3WfvUyRscw0gYTsEFMhrIe/nWLkYaf5SbKYjGYqtRV3aPwykJgF2VEMo1ac4bnsGA==
 
 rehype-parse@^9.0.0:
   version "9.0.1"

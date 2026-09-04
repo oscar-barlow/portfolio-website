@@ -3,7 +3,7 @@ layout: post
 title: "Explaining technical debt by analogy"
 description: "Reframing technical debt as strategic investment rather than blight, using analogy to improve understanding between technical and business stakeholders."
 date: 2019-08-14
-pull_quote: "[T]ech debt is a form of investment that, used wisely, can be extremely beneficial to your project."
+pull_quote: "tech debt is a form of investment that, used wisely, can be extremely beneficial to your project."
 ---
 
 I was interested to read a post on the Squarespace engineering blog, [3 Good Types of Tech Debt](https://engineering.squarespace.com/blog/2019/three-kinds-of-good-tech-debt), exploring the subject of tech debt. I think it's good that the idea that tech debt is receiving though and attention; in this vein I'm somewhat reminded of [A Taxonomy of Tech Debt](https://technology.riotgames.com/news/taxonomy-tech-debt).

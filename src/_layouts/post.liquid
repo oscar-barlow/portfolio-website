@@ -8,7 +8,7 @@
     {% else %}
       {% assign og_image = '/images/oscar.jpg' %}
     {% endif %}
-    {% render 'head', metadata: site.metadata, title: data.title, description: data.description, image: og_image %}
+    {% render 'head', metadata: site.metadata, title: data.title, description: data.description, image: og_image, url: resource.absolute_url %}
   </head>
   <body class="{{ data.layout }} {{ data.page_class }}">
     {% render 'navbar', metadata: site.metadata, resource: resource %}

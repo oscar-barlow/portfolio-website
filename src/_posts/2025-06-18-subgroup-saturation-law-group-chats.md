@@ -3,7 +3,7 @@ layout: post
 title: "Subset saturation law of group chats"
 description: "Group chats eventually splinter into subset conversations matching all possible member combinations; saturation degree can indicate cohesion and tie strength."
 date: 2025-06-18
-pull_quote: "Eventually, group chats will splinter off the group chat corresponding to all possible subsets of the main group."
+pull_quote: "The subset saturation law of group chats states that eventually, group chats will splinter off the group chat corresponding to all possible subsets of the main group."
 ---
 
 Suppose there is a social group that likes to communicate via group chat. We'll call its members Akira, Bilal, Chiara and Dan and refer to them as A, B, C and D for brevity.

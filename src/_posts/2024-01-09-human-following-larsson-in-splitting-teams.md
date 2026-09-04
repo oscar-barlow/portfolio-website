@@ -3,7 +3,7 @@ layout: post
 title: "Following Larsson in structuring teams"
 description: "Team sizing principles from Larsson: managers oversee six to eight engineers, small subteams cannot function independently, and teams should split as scope expands."
 date: 2024-01-09
-pull_quote: "A team should be split up when its scope exceeds what can be done by 6 to 8 engineers."
+pull_quote: "[A] team should be split up when its scope exceeds what can be done by 6 to 8 engineers."
 ---
 The chapter right after the introduction of [Larson, W. (2019). _An Elegant Puzzle: Systems of Engineering Management._ Stripe Press](https://lethain.com/elegant-puzzle/)[^1] concerns itself with sizing engineering teams. There's a lot in this chapter -- these points are salient for the moment:
 * Managers should manage between 6 and 8 engineers

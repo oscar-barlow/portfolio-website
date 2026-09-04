@@ -122,43 +122,6 @@ export function quoteFontSize(length, format = 'square') {
 }
 
 /**
- * The brand-mark signature: a rounded square with the teal->burgundy gradient
- * and a central white dot, echoing favicon.svg. Sits bottom-right as a subtle
- * footer signature (per brand.md).
- */
-function brandMark(size) {
-  const box = size;
-  const dot = Math.round(size * 0.28);
-  return {
-    type: 'div',
-    props: {
-      style: {
-        position: 'absolute',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: box,
-        height: box,
-        borderRadius: Math.round(box * 0.25),
-        backgroundImage: BG_GRADIENT,
-        opacity: 0.9,
-      },
-      children: {
-        type: 'div',
-        props: {
-          style: {
-            width: dot,
-            height: dot,
-            borderRadius: '50%',
-            backgroundColor: 'rgba(255,255,255,0.92)',
-          },
-        },
-      },
-    },
-  };
-}
-
-/**
  * Build the Satori VDOM for one image. Returns { node, width, height }.
  */
 export function buildTemplate({ quote, attribution, format = 'square' }) {
@@ -171,8 +134,6 @@ export function buildTemplate({ quote, attribution, format = 'square' }) {
   const pad = isOg ? 56 : 96; // outer canvas padding
   const cardPadX = isOg ? 72 : 88;
   const cardPadY = isOg ? 56 : 96;
-  const markSize = isOg ? 40 : 52;
-  const markInset = isOg ? 40 : 56;
 
   const children = [
     {
@@ -235,7 +196,6 @@ export function buildTemplate({ quote, attribution, format = 'square' }) {
     type: 'div',
     props: {
       style: {
-        position: 'relative',
         display: 'flex',
         width: '100%',
         height: '100%',
@@ -244,21 +204,7 @@ export function buildTemplate({ quote, attribution, format = 'square' }) {
         padding: pad,
         backgroundImage: BG_GRADIENT,
       },
-      children: [
-        card,
-        {
-          type: 'div',
-          props: {
-            style: {
-              position: 'absolute',
-              bottom: markInset,
-              right: markInset,
-              display: 'flex',
-            },
-            children: brandMark(markSize),
-          },
-        },
-      ],
+      children: card,
     },
   };
 

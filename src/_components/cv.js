@@ -255,15 +255,15 @@ class CVLoader {
           </a>
         </p>
       </header>
-      <div class="cv-separator">
-        <div class="brand-shape-tiny"></div>
+      <div class="brand-mark-placement brand-mark-placement--separator">
+        <div class="brand-mark brand-mark--tiny"></div>
       </div>
       <div class="cv-body">
         ${htmlContent}
       </div>
       <footer class="cv-footer">
-        <div class="cv-signature">
-          <div class="brand-shape-tiny"></div>
+        <div class="brand-mark-placement">
+          <div class="brand-mark brand-mark--tiny"></div>
         </div>
       </footer>
     `;

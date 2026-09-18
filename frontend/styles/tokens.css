@@ -1,0 +1,73 @@
+:root {
+  /* Semantic colour roles */
+  --color-background: #fefcf9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f6f4f0;
+  --color-text: #2d2d2d;
+  --color-heading: #1a1a1a;
+  --color-text-muted: #5a5a5a;
+  --color-action: #722F37;
+  --color-action-hover: #5A252C;
+  --color-action-soft: #f7edef;
+  --color-accent: #2F5F5F;
+  --color-accent-soft: #e8f0f0;
+  --color-border: #e8e1d8;
+  --color-border-strong: #bbbbbb;
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: rgba(255, 255, 255, 0.9);
+  --color-on-dark-subtle: rgba(255, 255, 255, 0.7);
+  --color-on-dark-border: rgba(255, 255, 255, 0.3);
+  --color-on-dark-border-hover: rgba(255, 255, 255, 0.5);
+  --color-on-dark-hover: rgba(255, 255, 255, 0.1);
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-share-shadow: rgba(0, 0, 0, 0.28);
+  --color-profile-accent: #4A8A8A;
+  --color-profile-action: #A55A65;
+
+  /* Brand assets */
+  --gradient-brand: linear-gradient(135deg, var(--color-accent), var(--color-action));
+  --gradient-brand-vertical: linear-gradient(180deg, var(--color-accent), var(--color-action));
+  --gradient-profile: linear-gradient(135deg, var(--color-profile-accent), var(--color-profile-action));
+  --shadow-profile: 0 12px 40px var(--color-shadow);
+
+  /* Type scale */
+  --type-xs: 0.75rem;
+  --type-sm: 0.875rem;
+  --type-base: 1rem;
+  --type-md: 1.125rem;
+  --type-lg: 1.25rem;
+  --type-xl: 1.5rem;
+  --type-2xl: 1.875rem;
+  --type-display: clamp(2rem, 4vw, 3rem);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Motion and focus */
+  --motion-duration-fast: 200ms;
+  --motion-duration-standard: 300ms;
+  --motion-duration-emphasis: 600ms;
+  --motion-duration-pulse: 2s;
+  --motion-duration-brand: 4s;
+  --motion-duration-reduced: 0.01ms;
+  --motion-ease-standard: ease;
+  --motion-ease-emphasis: ease-in-out;
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 3px;
+  --touch-target-min: 2.75rem;
+
+  /* Component dimensions */
+  --nav-width: 7.5rem;
+  --nav-height-tablet: 3.75rem;
+  --nav-height-mobile: 3.125rem;
+  --nav-height-compact: 2.8125rem;
+}

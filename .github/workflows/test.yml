@@ -26,6 +26,9 @@ jobs:
     - name: Run tests
       run: yarn test:run
 
+    - name: Validate design tokens
+      run: yarn lint:design
+
     - name: Run spellcheck
       run: make spellcheck
 

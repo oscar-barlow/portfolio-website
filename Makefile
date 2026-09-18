@@ -24,6 +24,10 @@ dev:
 test:
 	yarn test:run
 
+.PHONY: lint-design
+lint-design:
+	yarn lint:design
+
 test-watch:
 	yarn test
 

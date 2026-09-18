@@ -14,6 +14,7 @@ import { readFileSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import matter from 'gray-matter';
+import { parseDesignTokens, requireDesignToken } from './design-tokens.mjs';
 // satori and @resvg/resvg-js are imported lazily inside renderPng() so that
 // importing this module's pure helpers (e.g. from Vitest) does not trigger
 // Satori's async layout-engine (yoga-wasm) initialisation.
@@ -21,12 +22,15 @@ import matter from 'gray-matter';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, '..');
 
-// --- Brand tokens (mirrors frontend/styles/index.css :root + favicon.svg) ---
-const TEAL = '#2F5F5F'; // --tertiary-color
-const BURGUNDY = '#722F37'; // --action-color
-const HEADING = '#1a1a1a'; // --heading-color
-const MUTED = '#5a5a5a'; // --muted-text
-const CARD_BG = '#f6f4f0'; // off-white card, kin to --body-background #fefcf9
+// --- Brand tokens (canonical values live in frontend/styles/tokens.css) ---
+const tokenCss = readFileSync(join(REPO_ROOT, 'frontend', 'styles', 'tokens.css'), 'utf8');
+const designTokens = parseDesignTokens(tokenCss, 'frontend/styles/tokens.css');
+const TEAL = requireDesignToken(designTokens, '--color-accent');
+const BURGUNDY = requireDesignToken(designTokens, '--color-action');
+const HEADING = requireDesignToken(designTokens, '--color-heading');
+const MUTED = requireDesignToken(designTokens, '--color-text-muted');
+const CARD_BG = requireDesignToken(designTokens, '--color-surface-muted');
+const SHARE_SHADOW = requireDesignToken(designTokens, '--color-share-shadow');
 
 // Favicon / brand-mark gradient: teal (top-left) -> burgundy (bottom-right).
 const BG_GRADIENT = `linear-gradient(135deg, ${TEAL} 0%, ${BURGUNDY} 100%)`;
@@ -238,7 +242,7 @@ export function buildTemplate({ quote, attribution, format = 'square' }) {
         padding: `${cardPadY}px ${cardPadX}px`,
         borderRadius: 28,
         backgroundColor: CARD_BG,
-        boxShadow: '0 24px 70px rgba(0,0,0,0.28)',
+        boxShadow: `0 24px 70px ${SHARE_SHADOW}`,
       },
       children,
     },

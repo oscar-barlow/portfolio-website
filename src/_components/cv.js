@@ -161,7 +161,8 @@ class CVLoader {
     content = content.replace(/\\setlength\{[^}]*\}\{[^}]*\}/g, '');
     
     // Remove LaTeX comments and scope markers
-    content = content.replace(/%.*$/gm, '');
+    // A percent starts a LaTeX comment unless it is escaped as a literal sign.
+    content = content.replace(/(?<!\\)%.*$/gm, '');
     content = content.replace(/\{\s*%\s*Start of local scope/g, '');
     content = content.replace(/\}\s*%\s*End of local scope/g, '');
     content = content.replace(/^\s*\{\s*$/gm, '');
@@ -183,6 +184,7 @@ class CVLoader {
     
     // Handle LaTeX character escaping
     content = content.replace(/\\&/g, '&');  // LaTeX escaped ampersand
+    content = content.replace(/\\%/g, '%');  // LaTeX escaped percent sign
     content = content.replace(/--/g, '–');   // Double dash to en dash
     content = content.replace(/---/g, '—');  // Triple dash to em dash
     

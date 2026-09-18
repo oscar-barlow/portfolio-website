@@ -37,7 +37,7 @@ When making design decisions with the user that deviate from existing brand guid
 ### Interactive Elements
 - **Hover States**: Follow established patterns (subtle scale, color transitions)
 - **Animations**: Use consistent timing (0.2s for quick interactions, 0.6s for more dramatic effects)
-- **Brand Mark Behavior**: Standard rotation and scale effects (45° rotation, 1.1x scale)
+- **Brand Mark Behavior**: One-second rotation followed by a three-second rest while hovered or keyboard-focused; no motion when reduced motion is requested
 - **Transitions**: Use `ease` timing function for smooth, natural movement
 
 ### Recent Decisions & Updates
@@ -115,8 +115,7 @@ When making design decisions with the user that deviate from existing brand guid
 ## Common Patterns & Components
 
 ### Brand Mark Usage
-- **Navigation**: Standard size (40x40px) on homepage, small size (24x24px) on content pages
-- **Headers**: Small brand mark aligned with titles  
+- **Navigation**: Standard size (40x40px) on all pages
 - **Separators**: Tiny brand mark (16x16px) between sections
 - **Signatures**: Tiny brand mark in footer areas
 

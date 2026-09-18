@@ -3,10 +3,11 @@
   --body-color: #2d2d2d;
   --heading-color: #1a1a1a;
   --action-color: #722F37;
-  --action-color-secondary: #8B1538;
+  --action-color-hover: #5A252C;
   --accent-color: #722F37;
   --tertiary-color: #2F5F5F;
   --subtle-border: #e8e1d8;
+  --warm-neutral: #f6f4f0;
   --card-background: #ffffff;
   --muted-text: #5a5a5a;
 }
@@ -30,7 +31,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
@@ -42,7 +43,7 @@ a {
 }
 
 a:hover {
-  color: var(--action-color-secondary);
+  color: var(--action-color-hover);
 }
 
 h1 {
@@ -85,7 +86,7 @@ h1 {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Visual Brand Element for non-homepage */
+/* Navigation brand element */
 .nav-brand-element {
   width: 60px;
   height: 60px;
@@ -104,8 +105,9 @@ h1 {
   transition: transform 0.2s ease;
 }
 
-.brand-shape:hover {
-  animation: brandMarkContinuous 2s ease-in-out infinite;
+.nav-brand-element:hover .brand-shape,
+.nav-brand-element:focus-visible .brand-shape {
+  animation: brandMarkSpinAndRest 4s ease-in-out infinite;
 }
 
 .brand-shape::after {
@@ -154,7 +156,7 @@ h1 {
 
 .nav-links .cv-link:hover {
   color: white !important;
-  background: linear-gradient(135deg, var(--action-color), var(--action-color-secondary));
+  background: linear-gradient(135deg, var(--tertiary-color), var(--action-color));
   transform: scale(1.05);
 }
 
@@ -328,40 +330,6 @@ div.rubric {
   margin-left: 1rem;
 }
 
-/* Header Brand Mark */
-.header-brand-mark {
-  position: absolute;
-  left: -40px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.brand-shape-small {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, var(--tertiary-color), var(--action-color));
-  border-radius: 4px;
-  position: relative;
-  transition: transform 0.2s ease;
-}
-
-.brand-shape-small:hover {
-  animation: brandMarkContinuous 2s ease-in-out infinite;
-}
-
-.brand-shape-small::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-}
-
 /* Post Separator */
 .post-separator {
   display: flex;
@@ -511,12 +479,6 @@ div.rubric {
   background: linear-gradient(135deg, var(--tertiary-color), var(--action-color));
   border-radius: 3px;
   position: relative;
-  transition: all 0.2s ease;
-}
-
-.brand-shape-tiny:hover {
-  animation: brandMarkContinuous 2s ease-in-out infinite;
-  opacity: 1;
 }
 
 .brand-shape-tiny::after {
@@ -583,7 +545,7 @@ div.rubric {
 }
 
 .embeddable-buttondown-form button[type="submit"]:hover {
-  background: var(--action-color-secondary);
+  background: var(--action-color-hover);
 }
 
 .subscribe-attribution {
@@ -755,17 +717,18 @@ div.footnotes {
   font-size: 0.9rem;
 }
 
-blockquote{
+blockquote {
   font-size: 1.2em;
-  width:60%;
-  margin:50px auto;
-  font-style:italic;
-  padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid;
+  width: 100%;
+  max-width: 38rem;
+  margin: 3rem auto;
+  font-style: italic;
+  padding: 1.25em 1.5em;
+  border-left: 8px solid;
   border-image: linear-gradient(180deg, var(--action-color), var(--tertiary-color)) 1;
-  line-height:1.6;
+  line-height: 1.6;
   position: relative;
-  background:#EDEDED;
+  background: var(--warm-neutral);
 }
 
 footer {
@@ -1018,92 +981,6 @@ hr {
   }
 }
 
-/* Career Journey Section */
-.career-journey {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--subtle-border);
-  text-align: center;
-}
-
-.journey-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--heading-color);
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.5px;
-}
-
-.journey-path {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.journey-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 60px;
-}
-
-.step-icon {
-  font-size: 1.8rem;
-  line-height: 1;
-  transition: transform 0.2s ease;
-}
-
-.step-label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--muted-text);
-  transition: color 0.2s ease;
-}
-
-.journey-step.active .step-icon {
-  transform: scale(1.1);
-}
-
-.journey-step.active .step-label {
-  color: var(--action-color);
-  font-weight: 600;
-}
-
-.journey-arrow {
-  font-size: 1.2rem;
-  color: var(--muted-text);
-  margin: 0 0.5rem;
-}
-
-.journey-subtitle {
-  font-size: 0.95rem;
-  color: var(--muted-text);
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .journey-path {
-    gap: 0.5rem;
-  }
-  
-  .journey-arrow {
-    margin: 0 0.25rem;
-  }
-  
-  .step-icon {
-    font-size: 1.5rem;
-  }
-  
-  .step-label {
-    font-size: 0.8rem;
-  }
-}
-
 /* Extra small screens */
 @media (max-width: 480px) {
   .sidebar-nav {
@@ -1207,21 +1084,23 @@ hr {
   border-radius: 50%;
 }
 
-@keyframes brandMarkContinuous {
+@keyframes brandMarkSpinAndRest {
   0% {
     transform: rotate(0deg) scale(1);
   }
-  25% {
-    transform: rotate(90deg) scale(1.15);
-  }
-  50% {
+  12.5% {
     transform: rotate(180deg) scale(1);
   }
-  75% {
-    transform: rotate(270deg) scale(1.15);
-  }
-  100% {
+  25%, 100% {
     transform: rotate(360deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-brand-element:hover .brand-shape,
+  .nav-brand-element:focus-visible .brand-shape,
+  .loading-brand-mark .brand-shape {
+    animation: none;
   }
 }
 
@@ -1317,7 +1196,7 @@ hr {
 }
 
 .cv-email a:hover {
-  color: var(--action-color-secondary);
+  color: var(--action-color-hover);
   text-decoration: underline;
 }
 

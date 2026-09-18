@@ -26,17 +26,17 @@ When making design decisions with the user that deviate from existing brand guid
 
 ### Design Consistency
 - **Color Usage**: Always use CSS custom properties defined in the brand guidelines:
-  - `--action-color: #722F37` (burgundy)
-  - `--tertiary-color: #2F5F5F` (teal)  
-  - `--heading-color: #1a1a1a` (charcoal)
-  - Supporting neutrals as defined in brand.md
-- **Typography**: Maintain the established Inter font hierarchy
-- **Spacing**: Follow consistent margin and padding patterns
-- **Brand Mark**: Use appropriate size variants (standard/small/tiny) in correct contexts
+  - `--color-action: #722F37` (burgundy)
+  - `--color-accent: #2F5F5F` (teal)
+  - `--color-heading: #1a1a1a` (charcoal)
+  - Supporting semantic roles as defined in `frontend/styles/tokens.css`
+- **Typography**: Use the established `--type-*` scale; do not add one-off font sizes
+- **Spacing**: Use the `--space-*` scale for margins, padding and gaps
+- **Brand Mark**: Use `.brand-mark` with the standard or tiny size modifier and shared placement classes
 
 ### Interactive Elements
 - **Hover States**: Follow established patterns (subtle scale, color transitions)
-- **Animations**: Use consistent timing (0.2s for quick interactions, 0.6s for more dramatic effects)
+- **Animations**: Use the shared `--motion-duration-*` and easing tokens
 - **Brand Mark Behavior**: Standard and tiny marks use a one-second rotation followed by a three-second rest while hovered; linked marks also respond to keyboard focus, with no motion when reduced motion is requested
 - **Transitions**: Use `ease` timing function for smooth, natural movement
 
@@ -78,7 +78,10 @@ When making design decisions with the user that deviate from existing brand guid
 - Maintain consistent indentation and spacing
 - Group related properties logically
 - Comment major sections for clarity
-- Use CSS custom properties for brand colors and reusable values
+- Treat `frontend/styles/tokens.css` as the canonical source for colour,
+  gradient, type, spacing, motion and focus values
+- Run `yarn lint:design`; CI rejects unapproved colour literals, font sizes,
+  spacing values and motion durations outside the token layer
 
 ### Responsive Design
 - Mobile-first approach as outlined in brand guidelines
@@ -89,6 +92,8 @@ When making design decisions with the user that deviate from existing brand guid
 ### Accessibility
 - Maintain WCAG AA compliance
 - Ensure color contrast meets accessibility standards
+- Use the shared `:focus-visible` ring for links, controls and form fields
+- Preserve the global reduced-motion behavior for animations and transitions
 - Provide proper semantic HTML structure
 - Test keyboard navigation
 - Include appropriate alt text and ARIA labels
@@ -125,8 +130,8 @@ When making design decisions with the user that deviate from existing brand guid
 - **Interactive States**: Burgundy for primary actions, gradient effects for special elements
 
 ### Animation Guidelines
-- **Timing**: 0.2s for quick feedback, 0.6s for emphasis
-- **Easing**: Use `ease` function for natural movement
+- **Timing**: Use the named fast, standard and emphasis duration tokens
+- **Easing**: Use the standard and emphasis easing tokens
 - **Transforms**: Prefer scale and rotation over position changes
 - **Hover Effects**: Subtle but noticeable (1.02x scale for photos, 1.1x for brand marks)
 
@@ -150,6 +155,8 @@ When making design decisions with the user that deviate from existing brand guid
 - **August 2024**: Enhanced profile photo with gradient border and rotation animation
 - **August 2024**: Created brand mark favicon system with multiple format support
 - **September 2026**: Added pull-quote / OG image generator (branded share images from `pull_quote` frontmatter)
+- **September 2026**: Consolidated semantic design tokens, brand-mark components,
+  focus and reduced-motion behavior, with automated design-token validation
 
 ### Future Considerations
 - Template system for recurring content types

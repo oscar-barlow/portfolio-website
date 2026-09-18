@@ -29,31 +29,25 @@
 
 ### Color Palette
 
-**Primary Color - Burgundy**: `#722F37`
-- **Usage**: Main brand color, accent elements, call-to-action buttons
-- **Psychology**: Sophisticated, established, confident without being aggressive
-- **Application**: Profile panel background, accent bars, primary actions
+The canonical implementation lives in `frontend/styles/tokens.css`. Components
+must consume semantic roles rather than repeat colour literals.
 
-**Interactive Burgundy**: `#5A252C`
-- **Usage**: Hover states for burgundy links and buttons
-- **Rationale**: A restrained darkening of the primary burgundy that gives clear feedback without introducing a competing accent colour
+| Role | Token | Value | Primary use |
+| --- | --- | --- | --- |
+| Burgundy | `--color-action` | `#722F37` | Profile panel and primary actions |
+| Interactive burgundy | `--color-action-hover` | `#5A252C` | Link and button hover states |
+| Teal accent | `--color-accent` | `#2F5F5F` | Accent bars, focus rings and brand gradients |
+| Heading charcoal | `--color-heading` | `#1a1a1a` | Headings and navigation background |
+| Body charcoal | `--color-text` | `#2d2d2d` | Primary body copy |
+| Muted text | `--color-text-muted` | `#5a5a5a` | Dates and secondary copy |
+| Warm background | `--color-background` | `#fefcf9` | Page background |
+| Surface | `--color-surface` | `#ffffff` | Content panels and cards |
+| Muted surface | `--color-surface-muted` | `#f6f4f0` | Blockquotes and inset backgrounds |
+| Border | `--color-border` | `#e8e1d8` | Dividers and card borders |
 
-**Secondary Color - Charcoal**: `#1a1a1a` to `#2d2d2d`
-- **Usage**: Primary text, headings, navigation background
-- **Psychology**: Professional, authoritative, grounded
-- **Application**: Main text color, sidebar navigation, headings
-
-**Tertiary Color - Teal**: `#2F5F5F`
-- **Usage**: Accent elements, highlights, secondary actions
-- **Psychology**: Innovation, clarity, trustworthiness
-- **Application**: Accent bars, gradients, subtle highlights
-
-**Supporting Neutrals**:
-- **Background**: `#fefcf9` (warm off-white)
-- **Warm Neutral**: `#f6f4f0` (blockquote and inset backgrounds)
-- **Card Background**: `#ffffff` (pure white)
-- **Muted Text**: `#5a5a5a` (medium gray)
-- **Subtle Borders**: `#e8e1d8` (warm light gray)
+The canonical brand gradient is `--gradient-brand`: teal to burgundy at 135°.
+The vertical-border and lighter profile-ring variants reuse named colour stops
+and are defined beside it in the token source.
 
 ### Brand Mark System
 
@@ -68,6 +62,9 @@
 - Navigation: Show the standard brand mark on all pages
 - Post separators: Tiny brand mark between sections
 - Footer signatures: Tiny brand mark as content separator
+- Implementation: Use `.brand-mark` with the `.brand-mark--tiny` size modifier;
+  placements share `.brand-mark-placement` and add its separator modifier only
+  when they need vertical spacing
 
 ### Pull-Quote / Share Image Asset
 
@@ -89,12 +86,12 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
   brand colours are introduced.
 - **Card**: centred rounded rectangle (28px radius), warm off-white `#f6f4f0`,
   soft shadow.
-- **Quote**: Inter 700, `#1a1a1a` (`--heading-color`), centred, with curly
+- **Quote**: Inter 700, `#1a1a1a` (`--color-heading`), centred, with curly
   quotes; font size scales down as the quote lengthens so ~200-character quotes
   still fit.
-- **Attribution**: Inter 400 italic, `#5a5a5a` (`--muted-text`), centred, as
+- **Attribution**: Inter 400 italic, `#5a5a5a` (`--color-text-muted`), centred, as
   `— {attribution}` (omitted when there is no attribution).
-- **Call to action**: Inter 500, `#5a5a5a` (`--muted-text`), centred, below the
+- **Call to action**: Inter 500, `#5a5a5a` (`--color-text-muted`), centred, below the
   quote — `Read the full post on oscarbarlow.com/writing ->` (the `->` renders as
   an arrow via Inter's ligature). Drives traffic back to the site when the image
   is shared on its own.
@@ -106,12 +103,38 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
 - **Rationale**: Modern, highly legible, professional yet approachable
 - **Application**: All text content, headings, body copy
 
-**Typographic Hierarchy**:
-- **Main Headings (H1)**: 3rem, 700 weight, -0.02em letter-spacing
-- **Section Headings (H2)**: 1.8rem, 600 weight, subtle burgundy accent bars
-- **Post Titles**: 2.5rem, 700 weight, with inline date styling
-- **Body Text**: 1.1rem, 400 weight, 1.7 line-height
-- **Small Text/Dates**: 0.9rem, 400 weight, muted color
+**Type Scale**:
+- `--type-xs`: 0.75rem
+- `--type-sm`: 0.875rem
+- `--type-base`: 1rem
+- `--type-md`: 1.125rem
+- `--type-lg`: 1.25rem
+- `--type-xl`: 1.5rem
+- `--type-2xl`: 1.875rem
+- `--type-display`: fluid 2–3rem
+
+Display titles use the fluid step; section headings use `--type-xl` or
+`--type-2xl`; prose uses `--type-base` or `--type-md`; metadata uses the two
+small steps. Components must not introduce one-off font sizes.
+
+### Spacing System
+
+Spacing uses a quarter-rem base through the named `--space-*` scale in
+`frontend/styles/tokens.css`. Margins, padding and gaps must use the scale.
+Component geometry such as navigation height and brand-mark size has separate,
+explicit component tokens.
+
+### Focus and Motion
+
+- Interactive controls use the shared teal focus ring; controls on the dark
+  navigation use the light on-dark variant.
+- Fast feedback uses `--motion-duration-fast`, state transitions use
+  `--motion-duration-standard`, and emphasised transitions use
+  `--motion-duration-emphasis`.
+- Brand-mark and loading cycles use named component durations with the shared
+  emphasis easing.
+- Reduced-motion preferences collapse animation and transition durations to a
+  single imperceptible iteration across the site.
 
 ### Layout Philosophy
 
@@ -124,7 +147,7 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
 - **Generous White Space**: Allows content to breathe, creates premium feel
 - **Alignment System**: Consistent margins and padding create visual rhythm
 - **Content Hierarchy**: Clear visual distinction between content levels
-- **Sticky Elements**: Profile panel remains visible during scroll
+- **Sticky Elements**: The burgundy panel spans the homepage while its profile content remains visible during desktop scrolling
 
 ### Interactive Elements
 
@@ -195,21 +218,20 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
 
 **Header Treatment**:
 - Clean title presentation aligned with body text
-- Small brand mark as header accent
 - Inline date styling for posts
 - Consistent spacing and typography
 
 **Body Content**:
 - Generous line spacing (1.7x) for readability
 - Section headings with teal accent bars
-- Blockquotes with burgundy-to-teal gradient borders
+- Blockquotes with teal-to-burgundy gradient borders
 - Subtle brand mark separators between sections
 
 ### Mobile Optimization
 
 **Responsive Adaptations**:
 - Split-screen becomes stacked layout
-- Sidebar navigation becomes narrower (80px)
+- Sidebar navigation becomes a compact top bar
 - Typography scales appropriately
 - Touch targets meet accessibility guidelines (44x44px minimum)
 

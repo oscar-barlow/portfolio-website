@@ -52,6 +52,25 @@ bin/bridgetown console
 
 > Learn more: [Bridgetown CLI Documentation](https://www.bridgetownrb.com/docs/command-line-usage)
 
+## Design system
+
+`frontend/styles/tokens.css` is the canonical source for the site's semantic
+colours, gradients, type scale, spacing scale, motion and focus values. The OG
+image generator reads its brand colours from the same file, and tests keep the
+favicons aligned with the canonical gradient stops.
+
+Run the design-system guard before committing CSS changes:
+
+```sh
+yarn lint:design
+# or
+make lint-design
+```
+
+The guard rejects colour and gradient literals, one-off font sizes, spacing
+values and motion durations outside the token layer. The third-party syntax
+highlighting theme remains intentionally independent.
+
 ## Writing posts
 
 Posts live in `src/_posts/` as `YYYY-MM-DD-slug.md`. Required frontmatter is

@@ -5,6 +5,7 @@
   "scripts": {
     "esbuild": "node esbuild.config.js --minify",
     "esbuild-dev": "node esbuild.config.js --watch",
+    "lint:design": "node scripts/validate-design-tokens.mjs",
     "test": "vitest --watch",
     "test:run": "vitest run",
     "test:ui": "vitest --ui",

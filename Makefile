@@ -28,6 +28,10 @@ test:
 lint-design:
 	yarn lint:design
 
+.PHONY: lint-accessibility
+lint-accessibility:
+	yarn lint:accessibility
+
 test-watch:
 	yarn test
 

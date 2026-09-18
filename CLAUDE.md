@@ -90,12 +90,17 @@ When making design decisions with the user that deviate from existing brand guid
 - Ensure touch targets meet 44x44px minimum on mobile
 
 ### Accessibility
-- Maintain WCAG AA compliance
+- Use WCAG AA criteria as the design direction; do not describe the site as
+  certified or comprehensively conformant without a dedicated audit
 - Ensure color contrast meets accessibility standards
-- Use the shared `:focus-visible` ring for links, controls and form fields
+- Use the shared contextual `:focus-visible` ring for links, controls and form
+  fields: teal on light surfaces and white on burgundy or charcoal
+- Preserve underlines on inline prose links so they are not identified by
+  colour alone
+- Preserve the skip link and the `#main-content` target in every layout
 - Preserve the global reduced-motion behavior for animations and transitions
 - Provide proper semantic HTML structure
-- Test keyboard navigation
+- Run `yarn lint:accessibility` and manually test keyboard navigation
 - Include appropriate alt text and ARIA labels
 
 ## Implementation Workflow
@@ -172,7 +177,7 @@ Before finalizing any design changes:
 - [ ] Typography follows brand hierarchy
 - [ ] Interactive elements use consistent timing and easing
 - [ ] Responsive behavior works across all breakpoints
-- [ ] Accessibility standards are maintained
+- [ ] Accessibility direction is maintained and targeted safeguards pass
 - [ ] Brand mark usage follows size and context guidelines
 - [ ] Changes are documented in brand.md if they establish new patterns
 - [ ] Code follows established architectural patterns

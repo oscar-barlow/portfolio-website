@@ -126,8 +126,16 @@ explicit component tokens.
 
 ### Focus and Motion
 
-- Interactive controls use the shared teal focus ring; controls on the dark
-  navigation use the light on-dark variant.
+- Interactive controls use a crisp three-pixel teal focus ring with a
+  three-pixel offset on light surfaces. Burgundy and charcoal surfaces inherit
+  the same treatment in white. The ring is deliberately static: focus should
+  be unmistakable without adding another animation.
+- The shared focus selector covers links, buttons, form fields, disclosure
+  controls and custom tab stops. Every page provides a keyboard skip link to
+  its main content.
+- Inline prose links remain underlined at rest so meaning never depends on
+  colour alone. Navigation, cards and button-like links keep their component
+  treatments.
 - Fast feedback uses `--motion-duration-fast`, state transitions use
   `--motion-duration-standard`, and emphasised transitions use
   `--motion-duration-emphasis`.
@@ -261,7 +269,7 @@ explicit component tokens.
 
 **Technical Excellence**:
 - Fast loading times
-- Accessibility compliance (WCAG AA)
+- Accessibility decisions guided by WCAG AA criteria
 - Mobile-first responsive design
 - Progressive enhancement approach
 
@@ -301,7 +309,7 @@ explicit component tokens.
 - Maintain typography hierarchy
 - Follow spacing conventions
 - Test responsive behavior
-- Ensure accessibility compliance
+- Follow the accessibility direction and run the targeted automated safeguards
 
 ### Future Considerations
 

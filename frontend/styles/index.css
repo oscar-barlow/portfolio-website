@@ -34,9 +34,34 @@ a:hover {
   color: var(--color-action-hover);
 }
 
-:where(a, button, input):focus-visible {
-  outline: var(--focus-ring-width) solid var(--color-accent);
+:where(a[href], button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
   outline-offset: var(--focus-ring-offset);
+}
+
+:where(button, input:not([type="hidden"]), select, textarea) {
+  min-height: var(--touch-target-min);
+}
+
+.skip-link {
+  --focus-ring-color: var(--focus-ring-color-on-dark);
+  position: fixed;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 2000;
+  min-height: var(--touch-target-min);
+  padding: var(--space-2) var(--space-4);
+  display: flex;
+  align-items: center;
+  color: var(--color-on-dark);
+  background: var(--color-heading);
+  border-radius: 4px;
+  transform: translateY(calc(-100% - var(--space-8)));
+}
+
+.skip-link:focus-visible {
+  color: var(--color-on-dark);
+  transform: translateY(0);
 }
 
 h1 {
@@ -51,6 +76,7 @@ h1 {
 
 /* Sidebar Navigation */
 .sidebar-nav {
+  --focus-ring-color: var(--focus-ring-color-on-dark);
   position: fixed;
   left: 0;
   top: 0;
@@ -112,10 +138,6 @@ h1 {
   animation: brandMarkSpinAndRest var(--motion-duration-brand) var(--motion-ease-emphasis) infinite;
 }
 
-.nav-brand-element:focus-visible {
-  outline-color: var(--color-on-dark);
-}
-
 .brand-mark::after {
   content: '';
   position: absolute;
@@ -153,10 +175,6 @@ h1 {
   text-orientation: mixed;
 }
 
-.sidebar-nav a:focus-visible {
-  outline-color: var(--color-on-dark);
-}
-
 .nav-links a:hover {
   color: var(--color-on-dark);
   background: var(--color-on-dark-hover);
@@ -191,6 +209,7 @@ div.rubric {
 }
 
 .profile-panel {
+  --focus-ring-color: var(--focus-ring-color-on-dark);
   width: 40%;
   background: var(--color-action);
   color: var(--color-on-dark);
@@ -592,6 +611,17 @@ div.rubric {
 .content-body {
   font-size: var(--type-md);
   line-height: 1.7;
+}
+
+:where(.profile-intro, .content-body, .post-content, .cv-body, .cv-error, .cv-loading-link) a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  text-decoration-skip-ink: auto;
+}
+
+.profile-intro a {
+  color: inherit;
 }
 
 /* Post Layout */

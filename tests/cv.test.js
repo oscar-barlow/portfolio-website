@@ -35,6 +35,7 @@ describe('CVLoader', () => {
       expect(cvLoader.cacheTime).toBe(null);
       expect(cvLoader.cacheDuration).toBe(3 * 60 * 60 * 1000);
       expect(cvLoader.pdfUrl).toBe(null);
+      expect(cvLoader.latexSourceUrl).toBe('https://raw.githubusercontent.com/oscar-barlow/CV/master/leadership-cv.tex');
       expect(cvLoader.pdfFilePrefix).toBe('Oscar.Barlow.Leadership.CV');
       expect(cvLoader.legacyPdfFilePrefix).toBe('Oscar.Barlow.CV');
     });
@@ -88,7 +89,7 @@ describe('CVLoader', () => {
 
       await cvLoader.fetchLatexContent();
 
-      expect(fetch).toHaveBeenCalledWith('https://raw.githubusercontent.com/oscar-barlow/CV/master/CV.tex');
+      expect(fetch).toHaveBeenCalledWith('https://raw.githubusercontent.com/oscar-barlow/CV/master/leadership-cv.tex');
       expect(cvLoader.cache).toBeDefined();
       expect(cvLoader.cacheTime).toBeDefined();
       expect(displaySpy).toHaveBeenCalled();

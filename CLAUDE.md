@@ -37,7 +37,7 @@ When making design decisions with the user that deviate from existing brand guid
 ### Interactive Elements
 - **Hover States**: Follow established patterns (subtle scale, color transitions)
 - **Animations**: Use consistent timing (0.2s for quick interactions, 0.6s for more dramatic effects)
-- **Brand Mark Behavior**: One-second rotation followed by a three-second rest while hovered or keyboard-focused; no motion when reduced motion is requested
+- **Brand Mark Behavior**: Standard and tiny marks use a one-second rotation followed by a three-second rest while hovered; linked marks also respond to keyboard focus, with no motion when reduced motion is requested
 - **Transitions**: Use `ease` timing function for smooth, natural movement
 
 ### Recent Decisions & Updates

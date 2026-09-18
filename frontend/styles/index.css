@@ -481,6 +481,10 @@ div.rubric {
   position: relative;
 }
 
+.brand-shape-tiny:hover {
+  animation: brandMarkSpinAndRest 4s ease-in-out infinite;
+}
+
 .brand-shape-tiny::after {
   content: '';
   position: absolute;
@@ -1099,6 +1103,7 @@ hr {
 @media (prefers-reduced-motion: reduce) {
   .nav-brand-element:hover .brand-shape,
   .nav-brand-element:focus-visible .brand-shape,
+  .brand-shape-tiny:hover,
   .loading-brand-mark .brand-shape {
     animation: none;
   }

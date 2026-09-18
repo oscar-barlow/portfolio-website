@@ -141,8 +141,7 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
 - **CV Link**: Special treatment with gradient background on hover
 
 **Micro-Interactions**:
-- **Brand Mark**: On hover or keyboard focus, complete one rotation in approximately one second, rest for three seconds, then repeat while interaction continues; remain static when reduced motion is requested
-- **Tiny Brand Marks**: Decorative separator and signature marks remain static
+- **Brand Mark**: Standard and tiny marks complete one rotation in approximately one second, rest for three seconds, then repeat while hovered; the linked navigation mark also responds to keyboard focus, and all marks remain static when reduced motion is requested
 - **Profile Image**: Subtle scale on hover (1.02x)
 - **Navigation Links**: Color and background transitions
 - **Form Elements**: Focus states with burgundy accents

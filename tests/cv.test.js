@@ -206,6 +206,13 @@ describe('CVLoader', () => {
       expect(result.title).toBe('John Doe');
       expect(result.email).toBe('john@example.com');
     });
+
+    it('should decode escaped percent signs from LaTeX', () => {
+      const result = cvLoader.convertLatex('Achieving 70\\% daily staff usage');
+
+      expect(result.htmlContent).toContain('Achieving 70% daily staff usage');
+      expect(result.htmlContent).not.toContain('70\\%');
+    });
   });
 
   describe('Display Methods', () => {

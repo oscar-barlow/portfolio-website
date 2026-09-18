@@ -61,6 +61,8 @@
   --motion-duration-reduced: 0.01ms;
   --motion-ease-standard: ease;
   --motion-ease-emphasis: ease-in-out;
+  --focus-ring-color: var(--color-accent);
+  --focus-ring-color-on-dark: var(--color-on-dark);
   --focus-ring-width: 3px;
   --focus-ring-offset: 3px;
   --touch-target-min: 2.75rem;

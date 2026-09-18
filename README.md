@@ -71,6 +71,19 @@ The guard rejects colour and gradient literals, one-off font sizes, spacing
 values and motion durations outside the token layer. The third-party syntax
 highlighting theme remains intentionally independent.
 
+Run the targeted accessibility guard when changing colours, focus states,
+prose links, navigation, or layouts:
+
+```sh
+yarn lint:accessibility
+# or
+make lint-accessibility
+```
+
+This checks the site's documented contrast pairings and structural safeguards.
+It supports the WCAG-informed design direction but is not a claim of complete
+standards conformance or a substitute for manual keyboard review.
+
 ## Writing posts
 
 Posts live in `src/_posts/` as `YYYY-MM-DD-slug.md`. Required frontmatter is

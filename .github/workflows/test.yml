@@ -29,6 +29,9 @@ jobs:
     - name: Validate design tokens
       run: yarn lint:design
 
+    - name: Validate accessibility safeguards
+      run: yarn lint:accessibility
+
     - name: Run spellcheck
       run: make spellcheck
 

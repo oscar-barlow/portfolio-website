@@ -32,7 +32,11 @@
 **Primary Color - Burgundy**: `#722F37`
 - **Usage**: Main brand color, accent elements, call-to-action buttons
 - **Psychology**: Sophisticated, established, confident without being aggressive
-- **Application**: Profile panel background, accent bars, hover states
+- **Application**: Profile panel background, accent bars, primary actions
+
+**Interactive Burgundy**: `#5A252C`
+- **Usage**: Hover states for burgundy links and buttons
+- **Rationale**: A restrained darkening of the primary burgundy that gives clear feedback without introducing a competing accent colour
 
 **Secondary Color - Charcoal**: `#1a1a1a` to `#2d2d2d`
 - **Usage**: Primary text, headings, navigation background
@@ -46,6 +50,7 @@
 
 **Supporting Neutrals**:
 - **Background**: `#fefcf9` (warm off-white)
+- **Warm Neutral**: `#f6f4f0` (blockquote and inset backgrounds)
 - **Card Background**: `#ffffff` (pure white)
 - **Muted Text**: `#5a5a5a` (medium gray)
 - **Subtle Borders**: `#e8e1d8` (warm light gray)
@@ -57,13 +62,10 @@
 - **Secondary Element**: Central white circle for visual interest
 - **Variations**:
   - **Standard (40x40px)**: Navigation and primary placements
-  - **Small (24x24px)**: Headers and secondary placements  
   - **Tiny (16x16px)**: Signatures and subtle separators
 
 **Usage Guidelines**:
-- Homepage navigation: Show brand mark
-- Other pages navigation: Show professional headshot
-- Content pages: Small brand mark in headers aligned with titles
+- Navigation: Show the standard brand mark on all pages
 - Post separators: Tiny brand mark between sections
 - Footer signatures: Tiny brand mark as content separator
 
@@ -129,7 +131,7 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
 **Navigation System**:
 - **Sidebar Navigation**: Fixed left panel (120px width)
 - **Vertical Text**: Navigation links in vertical orientation
-- **Conditional Branding**: Brand mark on homepage, photo on other pages
+- **Consistent Branding**: Standard brand mark on all pages
 - **Hover States**: Subtle animations and color transitions
 
 **Button Treatments**:
@@ -139,7 +141,7 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
 - **CV Link**: Special treatment with gradient background on hover
 
 **Micro-Interactions**:
-- **Brand Mark**: Rotation and scale on hover (45° rotation, 1.1x scale)
+- **Brand Mark**: Standard and tiny marks complete one rotation in approximately one second, rest for three seconds, then repeat while hovered; the linked navigation mark also responds to keyboard focus, and all marks remain static when reduced motion is requested
 - **Profile Image**: Subtle scale on hover (1.02x)
 - **Navigation Links**: Color and background transitions
 - **Form Elements**: Focus states with burgundy accents
@@ -182,10 +184,9 @@ social platforms (primarily a direct LinkedIn image upload) and as the post's
 - Professional headshot (200px, circular, subtle shadow)
 - Name and title prominently displayed
 - Brief value proposition (2-3 sentences)
-- Links to recent thinking and latest posts
 
 **Content Panel Structure**:
-- "Recent Thinking" section with thematic overview
+- Concise "Writing" introduction describing the site's themes
 - "Latest Posts" with excerpts and dates
 - Clear navigation to full writing archive
 - Subtle burgundy accent elements

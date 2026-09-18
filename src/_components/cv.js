@@ -8,6 +8,8 @@ class CVLoader {
     this.cacheTime = null;
     this.cacheDuration = 3 * 60 * 60 * 1000; // 3 hours
     this.pdfUrl = null;
+    // The CV repository now keeps separate source files for each CV variant.
+    this.latexSourceUrl = 'https://raw.githubusercontent.com/oscar-barlow/CV/master/leadership-cv.tex';
     this.pdfFilePrefix = 'Oscar.Barlow.Leadership.CV';
     this.legacyPdfFilePrefix = 'Oscar.Barlow.CV';
   }
@@ -62,7 +64,7 @@ class CVLoader {
    * Fetches and processes LaTeX content from GitHub
    */
   async fetchLatexContent() {
-    const response = await fetch('https://raw.githubusercontent.com/oscar-barlow/CV/master/CV.tex');
+    const response = await fetch(this.latexSourceUrl);
     
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${response.statusText}`);

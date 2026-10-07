@@ -15,6 +15,10 @@ if (blocks.length > 0) {
     })
     mermaid.initialize({
       startOnLoad: false,
+      // Pin layout and look explicitly. Mermaid 12 defaults to the ELK layout
+      // and a new look; pinning keeps diagrams identical across versions.
+      layout: 'dagre',
+      look: 'classic',
       theme: 'base',
       themeVariables: {
         background: token('--color-surface'),

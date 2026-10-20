@@ -41,7 +41,7 @@
     "postcss-preset-env": "^11.3.2",
     "read-cache": "^1.0.2",
     "spellchecker-cli": "^7.0.3",
-    "vite": "^8.3.0",
+    "vite": "^8.3.3",
     "vitest": "^5.0.1"
   }
 }

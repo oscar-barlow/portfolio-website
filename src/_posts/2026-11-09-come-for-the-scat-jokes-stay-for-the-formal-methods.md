@@ -5,7 +5,7 @@ pull_quote: "It may yet be possible to rightsize the task of AI-assisted enginee
 title: "Come for the scat jokes. Stay for the formal methods."
 description: "It may yet be possible to rightsize the task of AI-assisted engineering to human cognitive capacity. Also, toilets, ha ha."
 ---
-My friend [Ismael Celis](https://ismaelcelis.com/) wrote a great post recently: [Welcome to the machine](Welcome to the machine). He says that his post is only incidentally about AI. Mine unabashedly is.
+My friend [Ismael Celis](https://ismaelcelis.com/) wrote a great post recently: [Welcome to the machine](https://ismaelcelis.com/posts/2026-10-welcome-to-the-machine/). He says that his post is only incidentally about AI. Mine unabashedly is.
 
 Chatting about it led me to believe that [conceptual integrity](https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/) in software development - or let's say, software product development - can actually mean two things:
 

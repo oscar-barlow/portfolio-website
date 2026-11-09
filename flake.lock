@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1786751896,
+        "narHash": "sha256-sNJSdCoaWjCF7q8Le03pfQQibqGB+NTRpRY7qJw03Qk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1055f58374f42fd07626aec0ef4fb1d658add341",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1055f58374f42fd07626aec0ef4fb1d658add341",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "ruby-nixpkgs": "ruby-nixpkgs"
+      }
+    },
+    "ruby-nixpkgs": {
+      "locked": {
+        "lastModified": 1703624527,
+        "narHash": "sha256-e5XNMNJ2Z61MEnXeMbGkLqWr0FfgH3y5X+9nV15pJak=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c407032be28ca2236f45c49cfb2b8b3885294f7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c407032be28ca2236f45c49cfb2b8b3885294f7f",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-09-11
-pull_quote: ""
+pull_quote: "It may yet be possible to rightsize the task of AI-assisted engineering to human cognitive capacity. Also, toilets, ha ha."
 title: "Come for the scat jokes. Stay for the formal methods."
 description: "It may yet be possible to rightsize the task of AI-assisted engineering to human cognitive capacity. Also, toilets, ha ha."
 ---

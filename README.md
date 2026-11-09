@@ -26,18 +26,19 @@ yarn install --frozen-lockfile
 make start
 ```
 
-The pinned flake provides Ruby 3.2, Bundler, Node 24, Yarn Classic, a C/C++
+The pinned flake provides Ruby 3.2.2, Bundler, Node 24.19.0, Yarn Classic, a C/C++
 compiler, Make, and the libraries and validation tools used by this repo.
 Project gems install into `vendor/bundle`; direnv's cache and any Bundler
 version requested by `Gemfile.lock` live in `.direnv/`. Both directories
 are ignored by Git. Dependencies are installed explicitly, not on shell entry.
 You can also enter the environment with `nix develop path:.` without direnv.
 
-Nix uses the Ruby 3.2 patch release available in the pinned Nixpkgs 25.05
-snapshot and the Node 24 patch release in the pinned current snapshot, rather
-than the exact versions in `.ruby-version` and `.nvmrc`. The separate Ruby
-snapshot preserves the repo's Ruby series, which newer nixpkgs has removed.
-Update the pins deliberately with `nix flake update`.
+The Ruby and Node versions match `.ruby-version` and `.nvmrc`, which Render
+uses for its builds. The flake checks both versions during evaluation so a
+pin update cannot silently introduce a mismatch. When changing either version,
+select a matching nixpkgs snapshot in `flake.nix` and regenerate `flake.lock`
+with `nix flake update`. Ruby uses a separate historical snapshot to provide
+the exact version.
 
 ### Manual setup
 

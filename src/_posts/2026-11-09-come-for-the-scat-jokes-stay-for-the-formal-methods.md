@@ -3,7 +3,7 @@ layout: post
 date: 2026-09-11
 pull_quote: ""
 title: "Come for the scat jokes. Stay for the formal methods."
-description: "Stitching together toilet humour with some thoughts about how the practie of software engineering may evolve, in the agentic era"
+description: "It may yet be possible to rightsize the task of AI-assisted engineering to human cognitive capacity. Also, toilets, ha ha."
 ---
 My friend [Ismael Celis](https://ismaelcelis.com/) wrote a great post recently: [Welcome to the machine](Welcome to the machine). He says that his post is only incidentally about AI. Mine unabashedly is.
 

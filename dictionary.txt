@@ -1,12 +1,15 @@
 100k
 1860s
+3d-force-graph
 architecting
 Akira
 Amor
 AmigoAI
 Bezos
+Celis
 checkmark
 Chiara
+codebase
 CommonCog
 counterfactuals
 Critchlow's
@@ -44,6 +47,7 @@ misallocation
 NotebookLM
 onboarding
 organogram
+PageRank
 Pandeleteius
 peacocking
 PRs
@@ -64,5 +68,6 @@ Superforecasting
 Tane
 Tetlock
 undersupply
+verifications
 Werner
 WhatsApp

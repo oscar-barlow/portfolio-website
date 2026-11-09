@@ -36,6 +36,6 @@ This would totally reorient the practice of software development:
 
 
 [^1]: Not more scat jokes. Probably?
-[^2]: I've made my own atttempts too, using PageRank and [3d-force-graph](https://github.com/vasturiano/3d-force-graph) to represent the relationships between functions and modules in my code. It's been a fun project but it's not really that useful right now.
+[^2]: I've made my own attempts too, using PageRank and [3d-force-graph](https://github.com/vasturiano/3d-force-graph) to represent the relationships between functions and modules in my code. It's been a fun project but it's not really that useful right now.
 [^3]: And we should definitely write them ourselves. It would be so tempting to let LLMs do it. We should resist that temptation.
 [^4]: I can't escape the thought that a prod deploy as a discrete event isn't the right abstraction for software engineering today, and that extending canary deploys with a measure of expected errors per 1,000 requests is the way to go. Haven't worked it all out yet. 

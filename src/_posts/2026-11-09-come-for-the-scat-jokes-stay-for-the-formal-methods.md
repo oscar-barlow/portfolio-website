@@ -22,7 +22,7 @@ Behold:
 
 Ismael produced this for me in the course of our chat. A bespoke toilet-based state machine chart. Truly, this is one of the most profound honours I have ever received.
 
-It's also fascinating in terms of where he is taking his thinking next[^1]. Ismael produces similar charts for the systems he works on professionally[^2]. Most important/cool: these state charts are not separate from the code, nor do they require the code to be hand-annotated. They are derived from the code itself.
+It's also fascinating in terms of where he is taking his thinking next[^1]. The most cool/important thing he's working on from my perspective is that he has a way to make these state charts not as separate from the code, nor requiring the code to be annotated. They are derived from production code itself[^2].
 
 This allows us to take an important step: if we can _reliably_ hand over (2) to machines, we absolutely should! 
 
@@ -36,6 +36,6 @@ This would totally reorient the practice of software development:
 
 
 [^1]: Not more scat jokes. Probably?
-[^2]: I've made my own attempts too, using PageRank and [3d-force-graph](https://github.com/vasturiano/3d-force-graph) to represent the relationships between functions and modules in my code. It's been a fun project but it's not really that useful right now.
+[^2]: Ismael notes that there's a lot of prior art in this space: [xstate](https://xstate.js.org/), [Harel, D. (1987). Statecharts: A visual formalism for complex systems. Science of computer programming, 8(3), 231-274.](https://www.state-machine.com/doc/Harel87.pdf), which he has been building on.
 [^3]: And we should definitely write them ourselves. It would be so tempting to let LLMs do it. We should resist that temptation.
 [^4]: I can't escape the thought that a prod deploy as a discrete event isn't the right abstraction for software engineering today, and that extending canary deploys with a measure of expected errors per 1,000 requests is the way to go. Haven't worked it all out yet. 

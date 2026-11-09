@@ -13,6 +13,34 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 
 ## Prerequisites
 
+### Nix and direnv (recommended)
+
+Install Nix with the `nix-command` and `flakes` experimental features enabled,
+then install direnv and enable its hook in your shell (for zsh, add
+`eval "$(direnv hook zsh)"` to `~/.zshrc`). From this repo, run:
+
+```sh
+direnv allow
+bundle install
+yarn install --frozen-lockfile
+make start
+```
+
+The pinned flake provides Ruby 3.2, Bundler, Node 24, Yarn Classic, a C/C++
+compiler, Make, and the libraries and validation tools used by this repo.
+Project gems install into `vendor/bundle`; direnv's cache and any Bundler
+version requested by `Gemfile.lock` live in `.direnv/`. Both directories
+are ignored by Git. Dependencies are installed explicitly, not on shell entry.
+You can also enter the environment with `nix develop path:.` without direnv.
+
+Nix uses the Ruby 3.2 patch release available in the pinned Nixpkgs 25.05
+snapshot and the Node 24 patch release in the pinned current snapshot, rather
+than the exact versions in `.ruby-version` and `.nvmrc`. The separate Ruby
+snapshot preserves the repo's Ruby series, which newer nixpkgs has removed.
+Update the pins deliberately with `nix flake update`.
+
+### Manual setup
+
 - [GCC](https://gcc.gnu.org/install/)
 - [Make](https://www.gnu.org/software/make/)
 - [Ruby](https://www.ruby-lang.org/en/downloads/)

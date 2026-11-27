@@ -4026,10 +4026,10 @@ rxjs@7.8.2:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-satori@^0.33.4:
-  version "0.33.4"
-  resolved "https://registry.yarnpkg.com/satori/-/satori-0.33.4.tgz#3aba54abc159aa7da259124cca0537740e935380"
-  integrity sha512-dCnaW6D/tkCJxG5UvpZPWnnvfTdGTVVSAq1tzH6xC5MeOhAeeswRcSq5zT7C6lRCdTGow9PRGus7PCzdp5JJYw==
+satori@^0.63.2:
+  version "0.63.2"
+  resolved "https://registry.yarnpkg.com/satori/-/satori-0.63.2.tgz#e42915765df90cc5c31a15760dc81072b40216d2"
+  integrity sha512-h7dm4BRMo8F53l9vOXOIfJoqeVXuZvyz13VsvVuwJb72sLfq+8uddJIJcjLKLv2BqWzDvYIpzi3rvBBS+ETuvw==
   dependencies:
     "@shuding/opentype.js" "1.4.0-beta.0"
     css-background-parser "^0.1.0"
@@ -4043,7 +4043,6 @@ satori@^0.33.4:
     linebreak "^1.1.0"
     parse-css-color "^0.2.1"
     postcss-value-parser "^4.2.0"
-    yoga-layout "^3.2.1"
 
 saxes@^6.0.0:
   version "6.0.0"
@@ -4650,11 +4649,6 @@ yargs@18.0.0:
     string-width "^7.2.0"
     y18n "^5.0.5"
     yargs-parser "^22.0.0"
-
-yoga-layout@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/yoga-layout/-/yoga-layout-3.2.1.tgz#d2d1ba06f0e81c2eb650c3e5ad8b0b4adde1e843"
-  integrity sha512-0LPOt3AxKqMdFBZA3HBAt/t/8vIKq7VaQYbuA8WxCgung+p9TVyKRYdpvCb80HcdTN2NkbIKbhNwKUfm3tQywQ==
 
 zwitch@^2.0.0, zwitch@^2.0.4:
   version "2.0.4"
